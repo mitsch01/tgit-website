@@ -5,12 +5,10 @@ const { footer } = siteData
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-brand-black)] text-white px-6 md:px-16 py-16">
-      <div className="max-w-6xl mx-auto flex flex-col items-center gap-10">
+      <div className="flex flex-col items-center gap-10">
 
         {/* Brand-Schriftzug */}
-        <p className="font-brand text-4xl md:text-5xl leading-tight text-center whitespace-pre-line">
-          {footer.logo}
-        </p>
+        <img src={footer.logo} width={200} alt="Footer Logo" className="mb-4" />
 
         {/* Social Icons ─────────────────────────────────────────────────────
             TODO: Ersetze die schwarzen Kreise durch echte Social-Icons (z.B.
@@ -27,7 +25,7 @@ export default function Footer() {
               className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-xs hover:bg-white/10 transition-colors"
             >
               {/* Platzhaler-Initiale – ersetzen durch echtes Icon */}
-              {link.label[0]}
+              {link.label.slice(0, 2).toUpperCase()}
             </a>
           ))}
         </div>

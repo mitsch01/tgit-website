@@ -1,23 +1,13 @@
-/* ─── FONTS ─────────────────────────────────────────────────
-   "Caveat" als Handschrift-Ersatz für den Brand-Schriftzug.
-   → AUSTAUSCHEN gegen die echte Schriftart der Kundin wenn vorhanden.
-   "DM Serif Display" für Überschriften, "DM Sans" für Fließtext.
-──────────────────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rock+Salt&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rock+Salt&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rock+Salt&display=swap");
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --color-brand-yellow: #e8ff00;
+  --color-brand-yellow: #E4F076;
   --color-brand-black: #0f0f0f;
   --color-brand-white: #fafaf5;
   --color-brand-gray: #f2f1eb;
   --color-brand-text: #1a1a1a;
-
-  --font-brand: "Rock Salt", cursive;
-  --font-heading: "Raleway", serif;
-  --font-body: "Open Sans", sans-serif;
 }
 
 * {
@@ -29,15 +19,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: var(--font-body);
+  font-family: "Open Sans", sans-serif;
   background-color: var(--color-brand-white);
   color: var(--color-brand-text);
   overflow-x: hidden;
-}
-
-.font-brand {
-  font-family: var(--font-brand);
-}
-.font-heading {
-  font-family: var(--font-heading);
 }

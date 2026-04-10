@@ -3,8 +3,8 @@ import ServiceCard from "./ServiceCard";
 
 export default function Services() {
   return (
-    <section id="leistungen" className="bg-(--color-brand-white) py-20">
-      <div className="max-w-3xl mx-auto px-6 md:px-16">
+    <section id="leistungen" className="bg-[var(--color-brand-white)] py-20 mb-24">
+      <div className="px-6 md:px-16" style={{ maxWidth: '60rem', margin: '0 auto' }}>
         {siteData.services.map((service) => (
           <ServiceCard
             key={service.id}
