@@ -5,9 +5,30 @@ import { siteData } from "../data/siteData";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 40);
+
+      if (currentScrollY < 80) {
+        setIsVisible(true);
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY + 4) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY - 4) {
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -20,6 +41,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isVisible || menuOpen ? "translate-y-0" : "-translate-y-full"
+      } ${
         scrolled ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent"
       }`}
     >
@@ -40,7 +63,7 @@ export default function Navbar() {
             <li key={link.href}>
               <button
                 onClick={() => handleNavClick(link.href)}
-                className="font-body text-xl font-semibold tracking-wide text-[var(--color-brand-text)] hover:text-[var(--color-brand-white)] transition-colors cursor-pointer"
+                className="font-body text-[21px] font-semibold tracking-wide text-[var(--color-brand-text)] hover:text-[var(--color-brand-white)] transition-colors cursor-pointer"
               >
                 {link.label}
               </button>

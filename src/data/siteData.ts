@@ -32,7 +32,7 @@ export const siteData = {
       title: "Interim &\nFractional\nManagement",
       description:
         "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
-      cta: "Beispiele",
+      cta: "BEISPIELE",
 
       assetSrc: "",
       assetAlt: "Interim & Fractional Management",
@@ -43,7 +43,7 @@ export const siteData = {
       title: "Projekt-\nMandate",
       description:
         "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
-      cta: "Beispiele",
+      cta: "BEISPIELE",
       assetSrc: "",
       assetAlt: "Projekt-Mandate",
       imageLeft: true, // Bild links, Text rechts
@@ -53,7 +53,7 @@ export const siteData = {
       title: "Executive &\nLeadership\nSparring",
       description:
         "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
-      cta: "Beispiele",
+      cta: "BEISPIELE",
       assetSrc: "",
       assetAlt: "Executive & Leadership Sparring",
       imageLeft: false,
@@ -63,7 +63,7 @@ export const siteData = {
       title: "Workshops\n& Training",
       description:
         "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
-      cta: "Beispiele",
+      cta: "BEISPIELE",
       assetSrc: "",
       assetAlt: "Workshops & Training",
       imageLeft: true,
@@ -84,6 +84,8 @@ export const siteData = {
 
   // ── KONTAKT ─────────────────────────────────────────────────────────────────
   contact: {
+    imageSrc: "src/assets/notizzettel.png",
+    imageAlt: "",
     heading: "KONTAKT",
     intro:
       "Ob Interim-Mandat, projektbasierte Unterstützung oder Sparring – ich freue mich über deine Nachricht und melde mich schnell bei dir zurück.",

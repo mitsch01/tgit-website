@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { siteData } from "../data/siteData";
+import NeonMarker from "./NeonMarker";
 
 const { hero } = siteData;
 
@@ -22,7 +23,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute top-[680px] left-36 md:right-12"
+          className="absolute top-[500px] left-36 md:right-12"
         >
           <img src={siteData.hero.logo} width={750} alt="Hero Logo" />
         </motion.div>
@@ -34,25 +35,22 @@ export default function Hero() {
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
         <div>
-          {/* Tagline mit Neon-Gelb-Unterstrich */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="font-heading text-3xl font-bold md:text-5xl mb-2 mt-36 leading-tight"
-          >
-            {hero.tagline}
-          </motion.h1>
+          {/* Tagline mit Highlighter-Markierung */}
+          <div className="mt-36 mb-8 text-center">
+            <div className="relative inline-block max-w-full px-2 py-1">
+              <NeonMarker />
 
-          {/* Neon-Unterstrich */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="h-1.5 w-48 bg-[var(--color-brand-yellow)] mb-8 origin-left"
-          />
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative z-10 font-heading text-3xl font-bold leading-tight md:text-5xl"
+              >
+                {hero.tagline}
+              </motion.h1>
+            </div>
+          </div>
 
           {/* Zitat */}
           <motion.p

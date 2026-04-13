@@ -36,23 +36,31 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative max-w-sm border border-gray-300 p-8 mt-24 mx-auto"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, transparent, transparent 27px, #e5e5dc 27px, #e5e5dc 28px), repeating-linear-gradient(90deg, transparent, transparent 27px, #e5e5dc 27px, #e5e5dc 28px)",
-            backgroundColor: "#fafaf0",
-          }}
+          className="relative max-w-sm p-8 mt-24 mx-auto overflow-visible"
         >
           {/* Klebe-Streifen oben (dekorativ) */}
-          <div
-            className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 -rotate-1"
-            style={{
-              backgroundColor: "var(--color-brand-yellow)",
-              opacity: 0.8,
-            }}
+          <div className="absolute -top-5 left-1/2 z-10 h-8 w-36 -translate-x-1/2 -rotate-1">
+            <img
+              src="src/assets/tape-schwarz.png"
+              alt=""
+              className="h-full w-full object-cover"
+              aria-hidden="true"
+            />
+          </div>
+
+          <img
+            src={contact.imageSrc}
+            alt={contact.imageAlt || ""}
+            className="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none"
+            aria-hidden="true"
           />
 
-          <div className="flex flex-col gap-2">
+          <div
+            className="absolute inset-0 bg-[var(--color-brand-white)]/75"
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 flex flex-col gap-2">
             <p className="font-heading text-2xl">{contact.name}</p>
             <p
               className="text-sm font-medium uppercase tracking-widest whitespace-pre-line opacity-60"
@@ -104,7 +112,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.35 }}
-          className="mt-10 mx-auto text-center"
+          className="mt-16 mx-auto text-center"
         >
           <a
             href={contact.mailtoHref}
