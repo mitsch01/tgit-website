@@ -29,42 +29,45 @@ export const siteData = {
   services: [
     {
       id: "interim",
-      title: "Interim &\nFractional\nManagement",
+      titleSrc: "src/assets/heading_interim.png",
+      titleAlt: "Interim &\nFractional\nManagement",
       description:
         "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
       cta: "BEISPIELE",
-
-      assetSrc: "",
+      assetSrc: "src/assets/note20.svg",
       assetAlt: "Interim & Fractional Management",
       imageLeft: false, // Text links, Bild rechts
     },
     {
       id: "projekte",
-      title: "Projekt-\nMandate",
+      titleSrc: "src/assets/heading_projekte.png",
+      titleAlt: "Projekt-\nMandate",
       description:
         "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
       cta: "BEISPIELE",
-      assetSrc: "",
+      assetSrc: "src/assets/note4.svg",
       assetAlt: "Projekt-Mandate",
       imageLeft: true, // Bild links, Text rechts
     },
     {
       id: "sparring",
-      title: "Executive &\nLeadership\nSparring",
+      titleSrc: "src/assets/heading_sparring.png",
+      titleAlt: "Executive &\nLeadership\nSparring",
       description:
         "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
       cta: "BEISPIELE",
-      assetSrc: "",
+      assetSrc: "src/assets/note8.svg",
       assetAlt: "Executive & Leadership Sparring",
       imageLeft: false,
     },
     {
       id: "workshops",
-      title: "Workshops\n& Training",
+      titleSrc: "src/assets/heading_workshops.png",
+      titleAlt: "Workshops\n&\nTraining",
       description:
         "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
       cta: "BEISPIELE",
-      assetSrc: "",
+      assetSrc: "src/assets/note20.svg",
       assetAlt: "Workshops & Training",
       imageLeft: true,
     },

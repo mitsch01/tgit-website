@@ -8,7 +8,8 @@ export default function Services() {
         {siteData.services.map((service) => (
           <ServiceCard
             key={service.id}
-            title={service.title}
+            titleSrc={service.titleSrc}
+            titleAlt={service.titleAlt}
             description={service.description}
             cta={service.cta}
             assetSrc={service.assetSrc}
