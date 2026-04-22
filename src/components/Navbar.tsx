@@ -58,7 +58,7 @@ export default function Navbar() {
         ></img>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {siteData.nav.links.map((link) => (
             <li key={link.href}>
               <button
@@ -71,12 +71,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="md:invisible md:w-60 md:h-10" />
+        <div className="lg:invisible lg:w-60 lg:h-10" />
 
         {/* Mobile Burger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+          className="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
           aria-label="Menü öffnen"
         >
           <span
@@ -98,7 +98,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[var(--color-brand-white)] border-t border-gray-100"
+            className="lg:hidden bg-[var(--color-brand-white)] border-t border-gray-100"
           >
             <ul className="px-6 py-6 flex flex-col gap-6">
               {siteData.nav.links.map((link) => (

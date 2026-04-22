@@ -55,7 +55,7 @@ export default function ServiceCard({
           <img
             src={titleSrc}
             alt={titleAlt}
-            className="absolute top-1/2 left-1/2 z-10 w-3/4 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain"
+            className="absolute top-1/2 left-1/2 z-10 w-3/5 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain"
           />
         </div>
       </div>
