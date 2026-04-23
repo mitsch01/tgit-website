@@ -6,6 +6,7 @@ interface ServiceCardProps {
   cta: string;
   assetSrc: string;
   assetAlt: string;
+  tapeSrc: string;
   imageLeft: boolean;
 }
 
@@ -16,6 +17,7 @@ export default function ServiceCard({
   cta,
   assetSrc,
   assetAlt,
+  tapeSrc,
   imageLeft,
 }: ServiceCardProps) {
   return (
@@ -47,15 +49,22 @@ export default function ServiceCard({
       {/* Bild-Seite */}
       <div className="flex-1 flex justify-center">
         <div className="relative w-full max-w-sm md:max-w-md">
+          {/* // Service-spezifisches Bild */}
           <img
             src={assetSrc}
             alt={assetAlt}
-            className="w-full object-contain"
+            className="w-11/12 object-contain relative z-20 mix-blend-multiply"
           />
+          {/* // Hintergrund */}
           <img
             src={titleSrc}
             alt={titleAlt}
-            className="absolute top-1/2 left-1/2 z-10 w-3/5 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain"
+            className="absolute top-52 left-44  -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
+          />
+          {/* // Tape */}
+          <img
+            src={tapeSrc}
+            className="absolute top-0 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
           />
         </div>
       </div>

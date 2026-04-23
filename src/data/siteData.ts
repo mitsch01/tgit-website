@@ -31,46 +31,51 @@ export const siteData = {
     services: [
       {
         id: "interim",
-        titleSrc: "src/assets/heading_interim.png",
-        titleAlt: "Interim &\nFractional\nManagement",
+        titleSrc: "src/assets/interim.png",
+        titleAlt: "Interim & Fractional Management",
         description:
           "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
         cta: "BEISPIELE",
-        assetSrc: "src/assets/note20.svg",
+        // assetSrc: "src/assets/note20.svg",
+        assetSrc: "src/assets/notizzettel1.png",
         assetAlt: "Interim & Fractional Management",
+        tapeSrc: "src/assets/tape1.png",
         imageLeft: false, // Text links, Bild rechts
       },
       {
         id: "projekte",
-        titleSrc: "src/assets/heading_projekte.png",
-        titleAlt: "Projekt-\nMandate",
+        titleSrc: "src/assets/projekte.png",
+        titleAlt: "Projekt-Mandate",
         description:
           "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
         cta: "BEISPIELE",
-        assetSrc: "src/assets/note4.svg",
+        assetSrc: "/src/assets/notizzettel3.png",
         assetAlt: "Projekt-Mandate",
+        tapeSrc: "src/assets/tape-schwarz-2.png",
         imageLeft: true, // Bild links, Text rechts
       },
       {
         id: "sparring",
-        titleSrc: "src/assets/heading_sparring.png",
-        titleAlt: "Executive &\nLeadership\nSparring",
+        titleSrc: "src/assets/sparring.png",
+        titleAlt: "Executive & Leadership Sparring",
         description:
           "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
         cta: "BEISPIELE",
-        assetSrc: "src/assets/note8.svg",
+        assetSrc: "src/assets/notizzettel2.png",
         assetAlt: "Executive & Leadership Sparring",
+        tapeSrc: "src/assets/tape-schwarz-3.png",
         imageLeft: false,
       },
       {
         id: "workshops",
-        titleSrc: "src/assets/heading_workshops.png",
-        titleAlt: "Workshops\n&\nTraining",
+        titleSrc: "src/assets/workshops.png",
+        titleAlt: "Workshops & Training",
         description:
           "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
         cta: "BEISPIELE",
-        assetSrc: "src/assets/note20.svg",
+        assetSrc: "src/assets/notizzettel4.png",
         assetAlt: "Workshops & Training",
+        tapeSrc: "src/assets/tape-schwarz-4.png",
         imageLeft: true,
       },
     ],

@@ -11,7 +11,7 @@ export default function Services() {
         className="px-6 md:px-16"
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
-        <h2 className="font-heading text-4xl font-bold text-center md:text-5xl mx-auto">
+        <h2 className="font-heading text-4xl font-bold text-center md:text-5xl mx-auto mb-12">
           {siteData.services.heading}
         </h2>
         {siteData.services.services.map((service) => (
@@ -23,6 +23,7 @@ export default function Services() {
             cta={service.cta}
             assetSrc={service.assetSrc}
             assetAlt={service.assetAlt}
+            tapeSrc={service.tapeSrc}
             imageLeft={service.imageLeft}
           />
         ))}

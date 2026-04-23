@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-yellow: #E4F076;
+  --color-brand-yellow: #f2ff93;
   --color-brand-black: #0f0f0f;
-  --color-brand-white: #fafaf5;
+  --color-brand-white: #ffffff;
   --color-brand-gray: #f2f1eb;
   --color-brand-text: #1a1a1a;
 }

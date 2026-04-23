@@ -6,7 +6,7 @@ const { hero } = siteData;
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col">
+    <section id="hero" className="relative min-h-screen flex flex-col mb-24">
       {/* ── Full-bleed Hero Bild ── */}
       <div className="relative flex-1 overflow-hidden">
         <img
@@ -23,7 +23,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute top-[500px] left-36 md:right-12"
+          className="absolute top-[55%] left-36 md:right-12"
         >
           <img src={siteData.hero.logo} width={750} alt="Hero Logo" />
         </motion.div>
