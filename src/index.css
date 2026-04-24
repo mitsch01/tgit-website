@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
 :root {
   --color-brand-yellow: #f2ff93;
   --color-brand-black: #0f0f0f;
   --color-brand-white: #ffffff;
-  --color-brand-gray: #f2f1eb;
+  --color-brand-gray: #fafaf5;
   --color-brand-text: #1a1a1a;
 }
 

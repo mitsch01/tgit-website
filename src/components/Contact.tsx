@@ -15,8 +15,13 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="font-heading text-4xl font-bold text-center md:text-5xl mx-auto"
+          className="relative font-heading text-4xl font-bold text-center md:text-5xl mx-auto"
         >
+          <img
+            src="src/assets/highlighter3.svg"
+            alt=""
+            className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
+          />
           {contact.heading}
         </motion.h2>
 
@@ -25,7 +30,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="max-w-xl leading-relaxed mt-16 opacity-70 text-base md:text-lg text-center mx-auto"
+          className="max-w-xl leading-relaxed mt-32 opacity-70 text-base md:text-lg text-center mx-auto"
           style={{ color: "var(--color-brand-text)" }}
         >
           {contact.intro}
@@ -36,22 +41,22 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative max-w-sm p-8 mt-24 mx-auto overflow-visible"
+          className="relative max-w-sm p-8 mt-20 mx-auto overflow-visible"
         >
           {/* Klebe-Streifen oben (dekorativ) */}
-          <div className="absolute -top-5 left-1/2 z-10 h-8 w-36 -translate-x-1/2 -rotate-1">
+          {/* <div className="absolute -top-5 left-1/2 z-10 h-8 w-36 -translate-x-1/2 -rotate-1">
             <img
-              src="src/assets/tape-schwarz.png"
+              src="src/assets/tape-white-1.png"
               alt=""
               className="h-full w-full object-cover"
               aria-hidden="true"
             />
-          </div>
+          </div> */}
 
           <img
             src={contact.imageSrc}
             alt={contact.imageAlt || ""}
-            className="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none"
+            className="absolute inset-0 w-full object-contain pointer-events-none"
             aria-hidden="true"
           />
 
@@ -68,7 +73,7 @@ export default function Contact() {
             >
               {contact.role}
             </p>
-            <div className="h-px bg-gray-300 my-3" />
+            <div className="h-px bg-gray-300 my-.5" />
             <p
               className="text-sm opacity-70"
               style={{ color: "var(--color-brand-text)" }}
@@ -112,7 +117,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.35 }}
-          className="mt-16 mx-auto text-center"
+          className="mt-48 mx-auto text-center"
         >
           <a
             href={contact.mailtoHref}

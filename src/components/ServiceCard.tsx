@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 interface ServiceCardProps {
+  // title: string;
   titleSrc: string;
   titleAlt: string;
+  titleSize: { width: string };
+  titlePosition: { top: string; left: string };
   description: string;
   cta: string;
   assetSrc: string;
@@ -11,8 +14,11 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({
+  // title,
   titleSrc,
   titleAlt,
+  titleSize,
+  titlePosition,
   description,
   cta,
   assetSrc,
@@ -48,23 +54,29 @@ export default function ServiceCard({
 
       {/* Bild-Seite */}
       <div className="flex-1 flex justify-center">
-        <div className="relative w-full max-w-sm md:max-w-md">
-          {/* // Service-spezifisches Bild */}
+        <div
+          className={`relative w-full max-w-sm md:max-w-md ${
+            titleAlt === "Leadership Sparring" ? "rotate-3" : ""
+          }`}
+        >
+          {/* // Notizzettel */}
           <img
             src={assetSrc}
             alt={assetAlt}
-            className="w-11/12 object-contain relative z-20 mix-blend-multiply"
+            className="object-contain relative z-20 opacity-60 mix-blend-multiply"
           />
-          {/* // Hintergrund */}
+          {/* // Heading */}
+          {/* <h1 className="font-brand font-extrabold text-2xl absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10">{title}</h1> */}
           <img
             src={titleSrc}
             alt={titleAlt}
-            className="absolute top-52 left-44  -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
+            style={{ ...titleSize, ...titlePosition }}
+            className="absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10"
           />
           {/* // Tape */}
           <img
             src={tapeSrc}
-            className="absolute top-0 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
+            className="absolute top-3 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
           />
         </div>
       </div>

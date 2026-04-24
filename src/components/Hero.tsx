@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { siteData } from "../data/siteData";
-import NeonMarker from "./NeonMarker";
+// import NeonMarker from "./NeonMarker";
 
 const { hero } = siteData;
 
@@ -38,8 +38,8 @@ export default function Hero() {
           {/* Tagline mit Highlighter-Markierung */}
           <div className="mt-36 mb-8 text-center">
             <div className="relative inline-block max-w-full px-2 py-1">
-              <NeonMarker />
-
+              {/* <NeonMarker /> */}
+              
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

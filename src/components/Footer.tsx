@@ -1,12 +1,11 @@
-import { siteData } from '../data/siteData'
+import { siteData } from "../data/siteData";
 
-const { footer } = siteData
+const { footer } = siteData;
 
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-brand-black)] text-white px-6 md:px-16 py-16">
       <div className="flex flex-col items-center gap-10">
-
         {/* Brand-Schriftzug */}
         <img src={footer.logo} width={200} alt="Footer Logo" className="mb-4" />
 
@@ -22,21 +21,20 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-xs hover:bg-white/10 transition-colors"
+              className="w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors"
             >
-              {/* Platzhaler-Initiale – ersetzen durch echtes Icon */}
-              {link.label.slice(0, 2).toUpperCase()}
+              <i className="fab fa-linkedin text-white text-4xl"></i>
             </a>
           ))}
         </div>
 
         {/* Legal Links */}
-        <div className="flex gap-6 text-xs text-white/40">
+        <div className="flex gap-6 text-xs text-white/70">
           {footer.legal.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="hover:text-white/70 transition-colors"
+              className="hover:text-white/90 transition-colors"
             >
               {link.label}
             </a>
@@ -44,8 +42,8 @@ export default function Footer() {
         </div>
 
         {/* Credit */}
-        <p className="text-xs text-white/25">{footer.credit}</p>
+        <p className="text-xs text-white/40">{footer.credit}</p>
       </div>
     </footer>
-  )
+  );
 }

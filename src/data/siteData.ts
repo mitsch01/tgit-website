@@ -31,51 +31,59 @@ export const siteData = {
     services: [
       {
         id: "interim",
-        titleSrc: "src/assets/interim.png",
+        // title: "Interim & Fractional Management",
+        titleSrc: "src/assets/interim-kurz.png",
         titleAlt: "Interim & Fractional Management",
+        titleSize: { width: "210px" },
+        titlePosition: { top: "50%", left: "50%" },
         description:
           "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
         cta: "BEISPIELE",
-        // assetSrc: "src/assets/note20.svg",
         assetSrc: "src/assets/notizzettel1.png",
         assetAlt: "Interim & Fractional Management",
-        tapeSrc: "src/assets/tape1.png",
+        tapeSrc: "src/assets/tape-white-1.png",
         imageLeft: false, // Text links, Bild rechts
       },
       {
         id: "projekte",
-        titleSrc: "src/assets/projekte.png",
+        titleSrc: "src/assets/projekte2.png",
         titleAlt: "Projekt-Mandate",
+        titleSize: { width: "170px" },
+        titlePosition: { top: "50%", left: "50%" },
         description:
           "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
         cta: "BEISPIELE",
         assetSrc: "/src/assets/notizzettel3.png",
         assetAlt: "Projekt-Mandate",
-        tapeSrc: "src/assets/tape-schwarz-2.png",
+        tapeSrc: "src/assets/tape-white-2.png",
         imageLeft: true, // Bild links, Text rechts
       },
       {
         id: "sparring",
-        titleSrc: "src/assets/sparring.png",
-        titleAlt: "Executive & Leadership Sparring",
+        titleSrc: "src/assets/l-sparring.png",
+        titleAlt: "Leadership Sparring",
+        titleSize: { width: "220px" },
+        titlePosition: { top: "50%", left: "50%" },
         description:
           "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
         cta: "BEISPIELE",
         assetSrc: "src/assets/notizzettel2.png",
-        assetAlt: "Executive & Leadership Sparring",
-        tapeSrc: "src/assets/tape-schwarz-3.png",
+        assetAlt: "Leadership Sparring",
+        tapeSrc: "src/assets/tape-white-3.png",
         imageLeft: false,
       },
       {
         id: "workshops",
         titleSrc: "src/assets/workshops.png",
         titleAlt: "Workshops & Training",
+        titleSize: { width: "220px" },
+        titlePosition: { top: "50%", left: "48%" },
         description:
           "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
         cta: "BEISPIELE",
         assetSrc: "src/assets/notizzettel4.png",
         assetAlt: "Workshops & Training",
-        tapeSrc: "src/assets/tape-schwarz-4.png",
+        tapeSrc: "src/assets/tape-white-4.png",
         imageLeft: true,
       },
     ],
@@ -83,7 +91,7 @@ export const siteData = {
 
   // ── ÜBER MICH ───────────────────────────────────────────────────────────────
   about: {
-    imageSrc: "src/assets/contact2_web.png",
+    imageSrc: "src/assets/contact3.jpg",
     imageAlt: "Katrin Schwerdtner",
     heading: "ÜBER MICH",
     paragraphs: [
@@ -95,7 +103,7 @@ export const siteData = {
 
   // ── KONTAKT ─────────────────────────────────────────────────────────────────
   contact: {
-    imageSrc: "src/assets/notizzettel.png",
+    imageSrc: "src/assets/tear-off-3.png",
     imageAlt: "",
     heading: "KONTAKT",
     intro:
@@ -112,16 +120,15 @@ export const siteData = {
 
   // ── FOOTER ──────────────────────────────────────────────────────────────────
   footer: {
-    logo: "src/assets/smiley-white.png",
+    logo: "src/assets/logo-white-max.png",
     // TODO: Links zu echten Profilen ersetzen
     socialLinks: [
       { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "Instagram", href: "https://instagram.com" },
     ],
     legal: [
       { label: "Impressum", href: "/impressum" },
       { label: "Datenschutz", href: "/datenschutz" },
     ],
-    credit: "Proudly built by the World's Best Company",
+    credit: "© 2026 Katrin Schwerdtner. All rights reserved.",
   },
 };
