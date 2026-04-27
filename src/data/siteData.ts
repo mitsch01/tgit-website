@@ -103,7 +103,7 @@ export const siteData = {
 
   // ── KONTAKT ─────────────────────────────────────────────────────────────────
   contact: {
-    imageSrc: "src/assets/tear-off-3.png",
+    imageSrc: "src/assets/note-contact.png",
     imageAlt: "",
     heading: "KONTAKT",
     intro:
