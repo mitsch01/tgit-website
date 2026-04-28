@@ -6,7 +6,8 @@
 export const siteData = {
   // ── NAVIGATION ──────────────────────────────────────────────────────────────
   nav: {
-    logo: "src/assets/tgit-black.png",
+    "logo-black": "src/assets/tgit-black.png",
+    "logo-white": "src/assets/tgit-white.png",
     links: [
       { label: "Leistungen", href: "#leistungen" },
       { label: "Über mich", href: "#ueber-mich" },
@@ -16,8 +17,9 @@ export const siteData = {
 
   // ── HERO ────────────────────────────────────────────────────────────────────
   hero: {
-    logo: "src/assets/logo-white-max.png",
-    imageSrc: "src/assets/hero2_web.jpg",
+    imageSrcLaptop: "src/assets/hero-landscape-1.jpg",
+    imageSrcTablet: "src/assets/hero-tablet.jpg",
+    imageSrcMobile: "src/assets/hero-portrait-1.jpg",
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
     tagline: "Better work starts now.",
     quote:
@@ -121,9 +123,11 @@ export const siteData = {
   // ── FOOTER ──────────────────────────────────────────────────────────────────
   footer: {
     logo: "src/assets/logo-white-max.png",
-    // TODO: Links zu echten Profilen ersetzen
     socialLinks: [
-      { label: "LinkedIn", href: "https://linkedin.com" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/katrin-schwerdtner",
+      },
     ],
     legal: [
       { label: "Impressum", href: "/impressum" },

@@ -391,7 +391,7 @@ export default function Contact() {
                 className="mt-2 text-sm leading-relaxed opacity-70"
                 style={{ color: "var(--color-brand-text)" }}
               >
-                Lade die Kontaktdaten als vCard fur dein Adressbuch herunter.
+                Lade dir meine Kontaktdaten als vCard herunter!
               </p>
 
               <button

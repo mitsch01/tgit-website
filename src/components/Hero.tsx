@@ -9,24 +9,21 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex flex-col mb-24">
       {/* ── Full-bleed Hero Bild ── */}
       <div className="relative flex-1 overflow-hidden">
-        <img
-          src={hero.imageSrc}
-          alt={hero.imageAlt}
-          className="w-full h-full object-cover object-top min-h-[75vh]"
-        />
-
-        {/* Overlay: dunkler Gradient von unten für Lesbarkeit des Textes */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute top-[55%] left-36 md:right-12"
-        >
-          <img src={siteData.hero.logo} width={750} alt="Hero Logo" />
-        </motion.div>
+        <picture>
+          <source
+            media="(max-width: 640px) and (orientation: portrait)"
+            srcSet={hero.imageSrcMobile}
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcSet={hero.imageSrcTablet}
+          />
+          <img
+            src={hero.imageSrcLaptop}
+            alt={hero.imageAlt}
+            className="w-full h-full object-cover object-top min-h-[75vh]"
+          />
+        </picture>
       </div>
 
       {/* ── Tagline & Quote Block ── */}
@@ -39,7 +36,7 @@ export default function Hero() {
           <div className="mt-36 mb-8 text-center">
             <div className="relative inline-block max-w-full px-2 py-1">
               {/* <NeonMarker /> */}
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
