@@ -1,12 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { siteData } from "../data/siteData";
 
 export default function Navbar() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const isLight = scrolled || menuOpen;
+  const isHome = location.pathname === "/";
+  const isLight = !isHome || scrolled || menuOpen;
   const menuBarColor = isLight ? "bg-[var(--color-brand-black)]" : "bg-white";
   const menuBarBaseClass =
     "block h-1 w-7 transition-all duration-300 sm:h-[5px] sm:w-9";
@@ -39,11 +43,17 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
+
+    if (!isHome) {
+      navigate(`/${href}`);
+      return;
+    }
+
     setTimeout(() => {
       const target = document.querySelector(href);
       if (!target) return;
       if (href === "#leistungen") {
-        const top = target.getBoundingClientRect().top + window.scrollY - 170;
+        const top = target.getBoundingClientRect().top + window.scrollY - 120;
         window.scrollTo({ top, behavior: "smooth" });
       } else {
         target.scrollIntoView({ behavior: "smooth" });
@@ -63,17 +73,17 @@ export default function Navbar() {
           src={
             isLight ? siteData.nav["logo-black"] : siteData.nav["logo-white"]
           }
-          className={`hidden h-auto w-28 object-contain transition-opacity duration-300 sm:block md:w-36 lg:w-48 ${isLight ? "opacity-100" : "opacity-20"}`}
+          className={`h-auto w-28 object-contain transition-opacity duration-300 w-36 lg:w-48 ${isLight ? "opacity-100" : "opacity-20"}`}
           onClick={(e) => {
             e.preventDefault();
-            handleNavClick("#hero");
+            navigate("/");
           }}
         ></img>
 
         {/* Menu Closed */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="absolute right-8 top-14 flex -translate-y-1/2 flex-col cursor-pointer gap-1.5 px-2"
+          className="absolute right-8 top-12 md:top-14 lg:top-20 flex -translate-y-1/2 flex-col cursor-pointer gap-1.5 px-2"
           aria-label="Menü öffnen"
         >
           <span

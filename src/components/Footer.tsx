@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { siteData } from "../data/siteData";
 
 const { footer } = siteData;
@@ -9,10 +10,7 @@ export default function Footer() {
         {/* Brand-Schriftzug */}
         <img src={footer.logo} width={200} alt="Footer Logo" className="mb-4" />
 
-        {/* Social Icons ─────────────────────────────────────────────────────
-            TODO: Ersetze die schwarzen Kreise durch echte Social-Icons (z.B.
-            react-icons oder SVG-Assets). Aktuell als Platzhalter-Kreise.
-        ──────────────────────────────────────────────────────────────────── */}
+        {/* Social Icon */}
         <div className="flex gap-4">
           {footer.socialLinks.map((link) => (
             <a
@@ -23,7 +21,7 @@ export default function Footer() {
               aria-label={link.label}
               className="w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors"
             >
-              <i className="fab fa-linkedin text-white text-4xl"></i>
+              <img src={link.logo} alt={link.label} className="h-10" />
             </a>
           ))}
         </div>
@@ -31,13 +29,13 @@ export default function Footer() {
         {/* Legal Links */}
         <div className="flex gap-6 text-xs text-white/70">
           {footer.legal.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               className="hover:text-white/90 transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 

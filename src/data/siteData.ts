@@ -19,7 +19,7 @@ export const siteData = {
   hero: {
     imageSrcLaptop: "/assets/Hero.jpg",
     imageSrcTablet: "/assets/hero-tablet.jpg",
-    imageSrcMobile: "/assets/hero-portrait-1.jpg",
+    imageSrcMobile: "/assets/hero-mobile.jpg",
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
     tagline: "Better work starts now.",
     quote:
@@ -148,6 +148,7 @@ export const siteData = {
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/katrin-schwerdtner",
+        logo: "/assets/linkedin.png",
       },
     ],
     legal: [
@@ -155,5 +156,116 @@ export const siteData = {
       { label: "Datenschutz", href: "/datenschutz" },
     ],
     credit: "© 2026 Katrin Schwerdtner. All rights reserved.",
+  },
+
+  // ── LEGAL PAGES CONTENT ───────────────────────────────────────────────────
+  legalPages: {
+    datenschutz: {
+      heading: "Datenschutz",
+      lastUpdated: "Stand: 29.04.2026",
+      sections: [
+        {
+          title: "Verantwortliche Stelle",
+          paragraphs: [
+            "TGIT - Thank God It's Tuesday",
+            "Katrin Schwerdtner",
+            "Sahrensdorf 31",
+            "23769 Fehmarn",
+            "",
+            "E-Mail: katrin@tgit.team",
+            "Telefon: +49 177 3477326",
+          ],
+        },
+        {
+          title: "Was wir auf dieser Website verarbeiten",
+          paragraphs: [
+            "Diese Website ist eine Informationsseite ohne Login, Shop oder eingebettete Tracking-Tools. Wir erheben keine personenbezogenen Daten direkt auf dieser Website, außer Sie kontaktieren uns aktiv per E-Mail.",
+          ],
+        },
+        {
+          title: "Hosting und Server-Logs",
+          paragraphs: [
+            "Die Website wird auf Vercel gehostet. Beim Aufruf der Seite werden technisch notwendige Server-Logdaten verarbeitet (z. B. IP-Adresse, Datum/Uhrzeit, angeforderte URL, Browser-/Systeminformationen), um die Website sicher und stabil bereitzustellen. Server-Logdaten werden nach spätestens 30 Tagen automatisch gelöscht.",
+            "Die Datenübermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO.",
+          ],
+          bullets: [
+            "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)",
+            "Anbieter: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA",
+            "Weitere Informationen: https://vercel.com/legal/privacy-policy",
+          ],
+        },
+        {
+          title: "Kontakt per E-Mail",
+          paragraphs: [
+            "Wenn Sie uns per E-Mail schreiben, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Die Daten werden nicht ohne Rechtsgrundlage an Dritte weitergegeben. Ihre Anfrage wird nach abschließender Bearbeitung gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+          ],
+          bullets: [
+            "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)",
+          ],
+        },
+        {
+          title: "Cookies und Tracking",
+          paragraphs: [
+            "Es werden keine eigenen Tracking- oder Marketing-Cookies eingesetzt. Falls Ihr Browser oder der Hostinganbieter technisch notwendige Cookies setzt, geschieht dies ausschließlich zur sicheren Auslieferung der Seite.",
+          ],
+        },
+        {
+          title: "Ihre Rechte",
+          paragraphs: [
+            "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch nach Maßgabe der DSGVO (Art. 15–21 DSGVO). Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Behörde für Schleswig-Holstein ist:",
+            "",
+            "Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein (ULD)",
+            "Holstenstraße 98",
+            "24103 Kiel",
+            "www.datenschutzzentrum.de",
+            "",
+            "Für alle Datenschutzanfragen: katrin@tgit.team",
+          ],
+        },
+      ],
+    },
+    impressum: {
+      heading: "Impressum",
+      sections: [
+        {
+          title: "Anbieterkennzeichnung",
+          paragraphs: [
+            "Katrin Schwerdtner",
+            "Unternehmensberaterin (Deutschland)",
+            "TGIT - Thank God It's Tuesday",
+            "",
+            "Sahrensdorf 31",
+            "23769 Fehmarn",
+          ],
+        },
+        {
+          title: "Kontakt",
+          paragraphs: ["Telefon: +49 177 3477326", "E-Mail: katrin@tgit.team"],
+        },
+        {
+          title: "Steuerliche Angaben",
+          options: [
+            {
+              label: "OPTION A - falls umsatzsteuerpflichtig",
+              text: "Umsatzsteuer-Identifikationsnummer gemaess § 27a UStG: DE[XXXXXXXXX]",
+            },
+            {
+              label: "OPTION B - falls Kleinunternehmerin nach § 19 UStG",
+              text: "Gemaess § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).",
+            },
+          ],
+        },
+        {
+          title: "Verantwortlich fuer den Inhalt nach § 18 Abs. 2 MStV",
+          paragraphs: ["Katrin Schwerdtner", "Sahrensdorf 31", "23769 Fehmarn"],
+        },
+        {
+          title: "Verbraucherstreitbeilegung / Universalschlichtungsstelle",
+          paragraphs: [
+            "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+          ],
+        },
+      ],
+    },
   },
 };

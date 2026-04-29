@@ -287,9 +287,23 @@ export default function Contact() {
                       rotate: 5.8,
                       scale: 1.01,
                       boxShadow: "none",
-                      transition: { duration: 0.2, ease: "easeOut" },
+                      transition: { duration: 0.1, ease: "easeOut" },
                     }
               }
+              onHoverEnd={() => {
+                if (isDialogOpen || prefersReducedMotion) {
+                  return;
+                }
+
+                void controls.start({
+                  x: 0,
+                  y: 0,
+                  rotate: 7,
+                  scale: 1,
+                  boxShadow: "none",
+                  transition: { duration: 0.1, ease: "easeOut" },
+                });
+              }}
               onClick={(event) => {
                 if (!isDialogOpen) {
                   void openDialog(event.clientX, event.clientY);
@@ -391,7 +405,7 @@ export default function Contact() {
                 className="mt-2 text-sm leading-relaxed opacity-70"
                 style={{ color: "var(--color-brand-text)" }}
               >
-                Lade dir meine Kontaktdaten als vCard herunter!
+                Lade dir meine Kontaktdaten als vCard herunter.
               </p>
 
               <button

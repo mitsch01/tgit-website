@@ -1,22 +1,34 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { useEffect } from "react";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
+import HomePage from "./components/HomePage";
+import LegalPage from "./components/LegalPage";
 import Navbar from "./components/Navbar";
-import References from "./components/References";
-import Services from "./components/Services";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Contact />
-        <References />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/datenschutz"
+          element={<LegalPage pageKey="datenschutz" />}
+        />
+        <Route path="/impressum" element={<LegalPage pageKey="impressum" />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <Footer />
     </>
   );
