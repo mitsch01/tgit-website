@@ -27,7 +27,7 @@ export default function About() {
           {about.heading}
         </motion.h2>
 
-        <div className="flex flex-col sm:flex-row gap-12 sm:gap-6 items-stretch">
+        <div className="flex flex-col sm:flex-row gap-12 sm:gap-6 md:gap-12 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

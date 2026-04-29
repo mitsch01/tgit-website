@@ -6,7 +6,7 @@ const { hero } = siteData;
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col mb-24">
+    <section id="hero" className="relative min-h-screen flex flex-col mb-[50px]">
       {/* ── Full-bleed Hero Bild ── */}
       <div className="relative flex-1 overflow-hidden">
         <picture>

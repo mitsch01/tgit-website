@@ -87,7 +87,7 @@ export default function ServiceCard({
       {/* Bild-Seite */}
       <div className="flex-1 flex justify-center">
         <div
-          className={`relative w-full max-w-sm md:max-w-md ${
+          className={`relative w-[80%] max-w-sm md:max-w-md ${
             titleAlt === "Leadership Sparring" ? "rotate-3" : ""
           }`}
         >

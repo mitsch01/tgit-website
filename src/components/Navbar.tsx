@@ -6,6 +6,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const isLight = scrolled || menuOpen;
+  const menuBarColor = isLight ? "bg-[var(--color-brand-black)]" : "bg-white";
+  const menuBarBaseClass =
+    "block h-1 w-7 transition-all duration-300 sm:h-[5px] sm:w-9";
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -22,7 +26,7 @@ export default function Navbar() {
 
       if (currentScrollY > lastScrollY + 4) {
         setIsVisible(false);
-      } else if (currentScrollY < lastScrollY - 4) {
+      } else if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       }
 
@@ -35,27 +39,31 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      const target = document.querySelector(href);
+      if (!target) return;
+      if (href === "#leistungen") {
+        const top = target.getBoundingClientRect().top + window.scrollY - 170;
+        window.scrollTo({ top, behavior: "smooth" });
+      } else {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 320);
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isVisible || menuOpen ? "translate-y-0" : "-translate-y-full"
-      } ${
-        scrolled ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent"
-      }`}
+      } ${scrolled || isLight ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent"}`}
     >
-      <nav className="flex items-center justify-between">
+      <nav className="relative min-w-0 px-2 pr-12 sm:px-6 sm:pr-16 md:px-10 md:pr-20">
         {/* Logo */}
         <img
           src={
-            scrolled || menuOpen
-              ? siteData.nav["logo-black"]
-              : siteData.nav["logo-white"]
+            isLight ? siteData.nav["logo-black"] : siteData.nav["logo-white"]
           }
-          width={240}
-          className={`transition-opacity duration-300 ${scrolled || menuOpen ? "opacity-100" : "opacity-20"}`}
+          className={`hidden h-auto w-28 object-contain transition-opacity duration-300 sm:block md:w-36 lg:w-48 ${isLight ? "opacity-100" : "opacity-20"}`}
           onClick={(e) => {
             e.preventDefault();
             handleNavClick("#hero");
@@ -65,17 +73,17 @@ export default function Navbar() {
         {/* Menu Closed */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex flex-col gap-1.5 px-16 cursor-pointer"
+          className="absolute right-8 top-14 flex -translate-y-1/2 flex-col cursor-pointer gap-1.5 px-2"
           aria-label="Menü öffnen"
         >
           <span
-            className={`block w-9 h-[5px] transition-all duration-300 ${scrolled || menuOpen ? "bg-[var(--color-brand-black)]" : "bg-white"} ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "rotate-45 translate-y-[11px]" : ""}`}
           />
           <span
-            className={`block w-9 h-[5px] transition-all duration-300 ${scrolled || menuOpen ? "bg-[var(--color-brand-black)]" : "bg-white"} ${menuOpen ? "opacity-0" : ""}`}
+            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block w-9 h-[5px] transition-all duration-300 ${scrolled || menuOpen ? "bg-[var(--color-brand-black)]" : "bg-white"} ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "-rotate-45 -translate-y-[11px]" : ""}`}
           />
         </button>
       </nav>
@@ -87,14 +95,14 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-[var(--color-brand-white)] border-t border-gray-100"
+            className="bg-[var(--color-brand-black)]"
           >
-            <ul className="px-6 py-6 flex flex-col gap-6">
+            <ul className="px-6 py-6 flex flex-col gap-6 items-end">
               {siteData.nav.links.map((link) => (
                 <li key={link.href}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="font-heading text-2xl text-[var(--color-brand-text)] cursor-pointer"
+                    className="font-heading text-2xl text-[var(--color-brand-white)] cursor-pointer"
                   >
                     {link.label}
                   </button>

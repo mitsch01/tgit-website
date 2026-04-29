@@ -34,9 +34,9 @@ export const siteData = {
       {
         id: "interim",
         // title: "Interim & Fractional Management",
-        titleSrc: "src/assets/interim-kurz.png",
+        titleSrc: "src/assets/interim.png",
         titleAlt: "Interim & Fractional Management",
-        titleSize: { width: "210px" },
+        titleSize: { width: "250px" },
         titlePosition: { top: "50%", left: "50%" },
         description:
           "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
@@ -53,10 +53,10 @@ export const siteData = {
       },
       {
         id: "projekte",
-        titleSrc: "src/assets/projekte2.png",
+        titleSrc: "src/assets/projekt.png",
         titleAlt: "Projekt-Mandate",
-        titleSize: { width: "170px" },
-        titlePosition: { top: "50%", left: "50%" },
+        titleSize: { width: "270px" },
+        titlePosition: { top: "55%", left: "60%" },
         description:
           "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
         cta: "BEISPIELE",
@@ -72,10 +72,10 @@ export const siteData = {
       },
       {
         id: "sparring",
-        titleSrc: "src/assets/l-sparring.png",
+        titleSrc: "src/assets/sparring.png",
         titleAlt: "Leadership Sparring",
-        titleSize: { width: "220px" },
-        titlePosition: { top: "50%", left: "50%" },
+        titleSize: { width: "250px" },
+        titlePosition: { top: "60%", left: "60%" },
         description:
           "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
         cta: "BEISPIELE",
@@ -93,8 +93,8 @@ export const siteData = {
         id: "workshops",
         titleSrc: "src/assets/workshops.png",
         titleAlt: "Workshops & Training",
-        titleSize: { width: "220px" },
-        titlePosition: { top: "50%", left: "48%" },
+        titleSize: { width: "260px" },
+        titlePosition: { top: "53%", left: "60%" },
         description:
           "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
         cta: "BEISPIELE",

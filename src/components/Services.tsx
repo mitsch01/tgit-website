@@ -16,7 +16,7 @@ export default function Services() {
           alt=""
           className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2"
         />
-        <h2 className="font-heading text-4xl font-bold text-center md:text-5xl mx-auto mb-24 mix-blend-multiply">
+        <h2 className="font-heading text-4xl font-bold text-center md:text-5xl mx-auto mb-12 mix-blend-multiply">
           {siteData.services.heading}
         </h2>
         {siteData.services.services.map((service) => (
