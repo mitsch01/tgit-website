@@ -37,12 +37,14 @@ export default function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`flex flex-col-reverse ${
-        imageLeft ? "md:flex-row" : "md:flex-row-reverse"
-      } gap-8 md:gap-16 items-center py-24 md:py-14 border-b border-gray-200`}
+      className="grid grid-cols-1 items-start gap-8 border-b border-gray-200 py-24 md:grid-cols-2 md:gap-16 md:py-14"
     >
       {/* Text-Seite */}
-      <div className="flex-1 flex flex-col gap-4">
+      <div
+        className={`w-full max-w-72 mx-auto flex flex-col gap-4 ${
+          imageLeft ? "md:order-2" : "md:order-1"
+        }`}
+      >
         <p
           className="text-base md:text-lg leading-relaxed opacity-70"
           style={{ color: "var(--color-brand-text)" }}
@@ -85,9 +87,13 @@ export default function ServiceCard({
       </div>
 
       {/* Bild-Seite */}
-      <div className="flex-1 flex justify-center">
+      <div
+        className={`w-full flex ${
+          imageLeft ? "md:order-1 justify-center md:justify-end" : "md:order-2 justify-center md:justify-start"
+        }`}
+      >
         <div
-          className={`relative w-[80%] max-w-sm md:max-w-md ${
+          className={`relative max-w-72 ${
             titleAlt === "Leadership Sparring" ? "rotate-3" : ""
           }`}
         >
@@ -98,7 +104,6 @@ export default function ServiceCard({
             className="object-contain relative z-20 opacity-60 mix-blend-multiply"
           />
           {/* // Heading */}
-          {/* <h1 className="font-brand font-extrabold text-2xl absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10">{title}</h1> */}
           <img
             src={titleSrc}
             alt={titleAlt}
@@ -108,7 +113,7 @@ export default function ServiceCard({
           {/* // Tape */}
           <img
             src={tapeSrc}
-            className="absolute top-3 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
+            className="absolute top-16 sm:top-3 left-1/2 w-2/5 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
           />
         </div>
       </div>

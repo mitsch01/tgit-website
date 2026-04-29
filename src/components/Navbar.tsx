@@ -13,7 +13,7 @@ export default function Navbar() {
   const isLight = !isHome || scrolled || menuOpen;
   const menuBarColor = isLight ? "bg-[var(--color-brand-black)]" : "bg-white";
   const menuBarBaseClass =
-    "block h-1 w-7 transition-all duration-300 sm:h-[5px] sm:w-9";
+    "block h-1 w-8 transition-all duration-300 sm:h-[5px] sm:w-9";
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -73,7 +73,7 @@ export default function Navbar() {
           src={
             isLight ? siteData.nav["logo-black"] : siteData.nav["logo-white"]
           }
-          className={`h-auto w-28 object-contain transition-opacity duration-300 w-36 lg:w-48 ${isLight ? "opacity-100" : "opacity-20"}`}
+          className={`h-auto object-contain transition-opacity duration-300 w-36 lg:w-48 ${isLight ? "opacity-100" : "opacity-20"}`}
           onClick={(e) => {
             e.preventDefault();
             navigate("/");

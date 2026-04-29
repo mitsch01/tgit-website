@@ -248,7 +248,7 @@ export default function Contact() {
           <img
             src="/assets/highlighter3.png"
             alt=""
-            className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
+            className="left-1/2 top-12 w-2/3 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply absolute"
           />
           {contact.heading}
         </motion.h2>

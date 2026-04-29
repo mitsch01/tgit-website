@@ -28,15 +28,13 @@ export default function Hero() {
 
       {/* ── Tagline & Quote Block ── */}
       <div
-        className="bg-[var(--color-brand-white)] text-center px-6 md:px-16 py-12"
+        className="bg-[var(--color-brand-white)] text-center px-6 md:px-16 md:py-12"
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
         <div>
-          {/* Tagline mit Highlighter-Markierung */}
-          <div className="mt-36 mb-8 text-center">
+          {/* Tagline */}
+          <div className="mt-36 mb-4 md:mb-8 text-center">
             <div className="relative inline-block max-w-full px-2 py-1">
-              {/* <NeonMarker /> */}
-
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +53,7 @@ export default function Hero() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-base md:text-lg max-w-2xl italic leading-relaxed mx-auto opacity-70"
+            className="text-base px-6 lg:px-0 md:text-lg max-w-2xl italic leading-relaxed mx-auto opacity-70"
             style={{ color: "var(--color-brand-text)" }}
           >
             {hero.quote}
