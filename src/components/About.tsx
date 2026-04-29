@@ -20,7 +20,7 @@ export default function About() {
           className="relative font-heading text-4xl font-bold text-center sm:text-5xl mb-28"
         >
           <img
-            src="src/assets/highlighter3.svg"
+            src="/assets/highlighter3.png"
             alt=""
             className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
           />

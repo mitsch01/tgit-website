@@ -12,7 +12,7 @@ export default function Services() {
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
         <img
-          src="src/assets/highlighter3.svg"
+          src="/assets/highlighter3.png"
           alt=""
           className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2"
         />

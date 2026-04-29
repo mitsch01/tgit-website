@@ -246,7 +246,7 @@ export default function Contact() {
           className="relative font-heading text-4xl font-bold text-center md:text-5xl mx-auto"
         >
           <img
-            src="src/assets/highlighter3.svg"
+            src="/assets/highlighter3.png"
             alt=""
             className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
           />
@@ -303,7 +303,7 @@ export default function Contact() {
             >
               <div className="absolute -top-2 left-[52%] z-20 h-8 w-36 -translate-x-1/2 -rotate-2">
                 <img
-                  src="src/assets/pin-black.png"
+                  src="/assets/pin-black.png"
                   alt=""
                   className="h-full w-full object-contain opacity-95"
                   aria-hidden="true"
