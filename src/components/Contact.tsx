@@ -298,7 +298,7 @@ export default function Contact() {
               aria-expanded={isDialogOpen}
               aria-controls="contact-save-dialog"
               aria-label="Kontakt als vCard speichern"
-              className="relative w-full cursor-pointer overflow-visible px-20 pb-8 pt-12 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)] focus-visible:ring-offset-4"
+              className="relative mx-auto block w-full max-w-[18rem] cursor-pointer overflow-visible text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)] focus-visible:ring-offset-4"
               style={{ transformOrigin: "18% 8%" }}
             >
               <div className="absolute -top-2 left-[52%] z-20 h-8 w-36 -translate-x-1/2 -rotate-2">
@@ -313,19 +313,19 @@ export default function Contact() {
               <img
                 src={contact.imageSrc}
                 alt={contact.imageAlt || ""}
-                className="absolute inset-0 h-full w-full object-contain pointer-events-none"
+                className="block h-auto w-full object-contain pointer-events-none"
                 aria-hidden="true"
               />
 
-              <div className="relative z-10 flex max-w-[90%] left-4 min-h-[23rem] flex-col gap-2">
-                <p className="font-heading text-2xl">{contact.name}</p>
+              <div className="absolute inset-x-[13%] bottom-[11%] top-[13.5%] z-10 flex flex-col gap-2">
+                <p className="font-heading text-2xl mb-4">{contact.name}</p>
                 <p
                   className="text-sm font-medium uppercase tracking-[0.24em] whitespace-pre-line opacity-60"
                   style={{ color: "var(--color-brand-text)" }}
                 >
                   {contact.role}
                 </p>
-                <div className="my-5 h-px w-full" />
+                <div className="my-[18.5px] h-px w-full" />
                 <p
                   className="text-sm opacity-70"
                   style={{ color: "var(--color-brand-text)" }}
@@ -353,7 +353,7 @@ export default function Contact() {
                   <span>{contact.mobile}</span>
                 </p>
                 <p
-                  className="mt-auto pt-5 text-xs uppercase tracking-[0.28em] opacity-55"
+                  className="mt-[50px] pt-5 text-xs uppercase tracking-[0.28em] opacity-55"
                   style={{ color: "var(--color-brand-text)" }}
                 >
                   Klick to save contact

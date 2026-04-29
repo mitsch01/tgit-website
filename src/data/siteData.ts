@@ -17,7 +17,7 @@ export const siteData = {
 
   // ── HERO ────────────────────────────────────────────────────────────────────
   hero: {
-    imageSrcLaptop: "src/assets/hero-landscape-1.jpg",
+    imageSrcLaptop: "src/assets/Hero.jpg",
     imageSrcTablet: "src/assets/hero-tablet.jpg",
     imageSrcMobile: "src/assets/hero-portrait-1.jpg",
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
@@ -41,6 +41,11 @@ export const siteData = {
         description:
           "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
         cta: "BEISPIELE",
+        examples: [
+          "Überbrückung von Vakanzen in People-/HR-Leadership-Rollen",
+          "Aufbau oder Neuausrichtung von People & Culture Strukturen",
+          "Change- und Transformationsbegleitung",
+        ],
         assetSrc: "src/assets/notizzettel1.png",
         assetAlt: "Interim & Fractional Management",
         tapeSrc: "src/assets/tape-white-1.png",
@@ -55,6 +60,11 @@ export const siteData = {
         description:
           "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
         cta: "BEISPIELE",
+        examples: [
+          "Organisationsdesign und Strukturaufbau",
+          "Kultur, Leadership und Zusammenarbeit",
+          "HR-Modelle, Prozesse und Operating Principles",
+        ],
         assetSrc: "/src/assets/notizzettel3.png",
         assetAlt: "Projekt-Mandate",
         tapeSrc: "src/assets/tape-white-2.png",
@@ -69,6 +79,11 @@ export const siteData = {
         description:
           "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
         cta: "BEISPIELE",
+        examples: [
+          "Sparring zu People-, Organisations- und Leadership-Themen",
+          "Reflexion von Führungsrollen, Strukturen und Entscheidungen",
+          "Begleitung von Führungsteams in Veränderungs- und Wachstumsphasen",
+        ],
         assetSrc: "src/assets/notizzettel2.png",
         assetAlt: "Leadership Sparring",
         tapeSrc: "src/assets/tape-white-3.png",
@@ -83,6 +98,12 @@ export const siteData = {
         description:
           "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
         cta: "BEISPIELE",
+        examples: [
+          "New Leadership und New Work",
+          "Kulturdynamiken und Wertearbeit",
+          "High Performance und Ways of Working",
+          "Strategie- und Teamworkshops",
+        ],
         assetSrc: "src/assets/notizzettel4.png",
         assetAlt: "Workshops & Training",
         tapeSrc: "src/assets/tape-white-4.png",

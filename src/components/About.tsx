@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="ueber-mich" className="bg-[var(--color-brand-gray)] py-36">
       <div
-        className="px-6 md:px-8"
+        className="px-12"
         style={{ maxWidth: "56rem", margin: "0 auto" }}
       >
         {/* Section Label */}
@@ -17,7 +17,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative font-heading text-4xl font-bold text-center md:text-5xl mb-28"
+          className="relative font-heading text-4xl font-bold text-center sm:text-5xl mb-28"
         >
           <img
             src="src/assets/highlighter3.svg"
@@ -27,13 +27,13 @@ export default function About() {
           {about.heading}
         </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-stretch">
+        <div className="flex flex-col sm:flex-row gap-12 sm:gap-6 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative w-full md:w-1/2 shrink-0 min-h-64 overflow-hidden rounded-sm"
+            className="relative w-full sm:w-1/2 shrink-0 min-h-[600px] overflow-hidden rounded-sm"
           >
             <img
               src={about.imageSrc}
@@ -53,7 +53,7 @@ export default function About() {
             {about.paragraphs.map((p, i) => (
               <p
                 key={i}
-                className="leading-relaxed text-base md:text-lg opacity-80"
+                className="leading-relaxed text-base opacity-80"
                 style={{ color: "var(--color-brand-text)" }}
               >
                 {p}

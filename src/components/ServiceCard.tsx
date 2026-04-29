@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 interface ServiceCardProps {
   // title: string;
   titleSrc: string;
@@ -7,6 +8,7 @@ interface ServiceCardProps {
   titlePosition: { top: string; left: string };
   description: string;
   cta: string;
+  examples: string[];
   assetSrc: string;
   assetAlt: string;
   tapeSrc: string;
@@ -21,20 +23,23 @@ export default function ServiceCard({
   titlePosition,
   description,
   cta,
+  examples,
   assetSrc,
   assetAlt,
   tapeSrc,
   imageLeft,
 }: ServiceCardProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`flex flex-col ${
-        imageLeft ? "md:flex-row-reverse" : "md:flex-row"
-      } gap-8 md:gap-16 items-center py-14 border-b border-gray-200`}
+      className={`flex flex-col-reverse ${
+        imageLeft ? "md:flex-row" : "md:flex-row-reverse"
+      } gap-8 md:gap-16 items-center py-24 md:py-14 border-b border-gray-200`}
     >
       {/* Text-Seite */}
       <div className="flex-1 flex flex-col gap-4">
@@ -46,10 +51,37 @@ export default function ServiceCard({
         </p>
 
         {/* Beispiele mit Plus */}
-        <button className="mt-2 border-b border-black transition-all cursor-pointer flex justify-between items-center gap-2">
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="mt-2 border-b border-black transition-all cursor-pointer flex justify-between items-center gap-2"
+          type="button"
+          aria-expanded={isOpen}
+        >
           <p className="text-sm font-semibold">{cta}</p>{" "}
-          <p className="text-xl">+</p>
+          <p className="text-xl">{isOpen ? "–" : "+"}</p>
         </button>
+
+        {isOpen && (
+          <motion.ul
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="space-y-2"
+          >
+            {examples.map((example) => (
+              <li
+                key={example}
+                className="flex items-start gap-3 text-sm md:text-base opacity-80 text-[#1a1a1a]/90"
+              >
+                <span
+                  aria-hidden="true"
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#1a1a1a]/90"
+                />
+                <span>{example}</span>
+              </li>
+            ))}
+          </motion.ul>
+        )}
       </div>
 
       {/* Bild-Seite */}

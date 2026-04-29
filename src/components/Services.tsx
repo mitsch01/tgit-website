@@ -8,7 +8,7 @@ export default function Services() {
       className=" bg-[var(--color-brand-white)] py-20 mb-24"
     >
       <div
-        className="relative px-6 md:px-16"
+        className="relative px-12 md:px-16"
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
         <img
@@ -29,6 +29,7 @@ export default function Services() {
             titlePosition={service.titlePosition}
             description={service.description}
             cta={service.cta}
+            examples={service.examples}
             assetSrc={service.assetSrc}
             assetAlt={service.assetAlt}
             tapeSrc={service.tapeSrc}
