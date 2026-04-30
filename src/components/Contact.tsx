@@ -264,8 +264,18 @@ export default function Contact() {
           {contact.intro}
         </motion.p>
 
-        <div className="relative mt-20 md:grid md:grid-cols-2 md:items-start bg-transparent">
-          <div className="hidden md:block" aria-hidden="true" />
+        <div className="relative mt-20 md:grid md:grid-cols-2 md:items-start bg-transparent max-w-xl mx-auto">
+          <div
+            className="hidden md:flex md:items-center md:justify-center"
+            aria-hidden="true"
+          >
+            <img
+              src="/assets/pfeil.gif"
+              alt=""
+              className="h-auto w-1/2 max-w-[17rem] object-contain"
+              style={{ filter: "brightness(0) saturate(100%)" }}
+            />
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -433,9 +443,9 @@ export default function Contact() {
         >
           <a
             href={contact.mailtoHref}
-            className="inline-block bg-[var(--color-brand-yellow)] text-[var(--color-brand-black)] font-medium px-8 py-4 text-sm tracking-wide hover:brightness-110 transition-all"
+            className="inline-block bg-[var(--color-brand-yellow)] text-[var(--color-brand-black)] font-medium px-8 py-4 tracking-wide hover:brightness-110 transition-all"
           >
-            Nachricht schreiben →
+            Nachricht schreiben
           </a>
         </motion.div>
       </div>

@@ -6,10 +6,7 @@ const { about } = siteData;
 export default function About() {
   return (
     <section id="ueber-mich" className="bg-[var(--color-brand-gray)] py-36">
-      <div
-        className="px-12"
-        style={{ maxWidth: "56rem", margin: "0 auto" }}
-      >
+      <div className="px-12" style={{ maxWidth: "56rem", margin: "0 auto" }}>
         {/* Section Label */}
 
         <motion.h2
@@ -59,6 +56,13 @@ export default function About() {
                 {p}
               </p>
             ))}
+            <motion.img
+              src="/assets/smiley-white.png"
+              alt=""
+              className="w-1/2 self-center"
+              whileHover={{ scale: 1.2 }}
+              transition={{ type: "spring", stiffness: 280, damping: 16 }}
+            />
           </motion.div>
         </div>
       </div>

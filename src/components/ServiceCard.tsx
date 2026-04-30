@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 interface ServiceCardProps {
   // title: string;
@@ -30,6 +30,7 @@ export default function ServiceCard({
   imageLeft,
 }: ServiceCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <motion.div
@@ -37,12 +38,14 @@ export default function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="grid grid-cols-1 items-start gap-8 border-b border-gray-200 py-24 md:grid-cols-2 md:gap-16 md:py-14"
+      className="mx-auto grid w-full max-w-[46rem] grid-cols-1 items-start gap-8 border-b border-gray-200 py-24 md:grid-cols-2 md:gap-16 md:py-14"
     >
       {/* Text-Seite */}
       <div
-        className={`w-full max-w-72 mx-auto flex flex-col gap-4 ${
-          imageLeft ? "md:order-2" : "md:order-1"
+        className={`order-2 flex w-full max-w-80 flex-col gap-4 mx-auto ${
+          imageLeft
+            ? "md:order-2 md:ml-auto md:mr-0"
+            : "md:order-1 md:ml-0 md:mr-auto"
         }`}
       >
         <p
@@ -88,14 +91,23 @@ export default function ServiceCard({
 
       {/* Bild-Seite */}
       <div
-        className={`w-full flex ${
-          imageLeft ? "md:order-1 justify-center md:justify-end" : "md:order-2 justify-center md:justify-start"
-        }`}
+        className={`order-1 w-full ${imageLeft ? "md:order-1" : "md:order-2"}`}
       >
-        <div
-          className={`relative max-w-72 ${
-            titleAlt === "Leadership Sparring" ? "rotate-3" : ""
-          }`}
+        <motion.div
+          whileHover={
+            prefersReducedMotion
+              ? undefined
+              : {
+                  x: 8,
+                  y: -4,
+                  rotate: imageLeft ? 1 : -1,
+                  transition: { duration: 0.18, ease: "easeOut" },
+                }
+          }
+          className={`relative w-full max-w-80 mx-auto ${
+            imageLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
+          } ${titleAlt === "Leadership Sparring" ? "rotate-3" : ""}`}
+          style={{ transformOrigin: "50% 10%" }}
         >
           {/* // Notizzettel */}
           <img
@@ -113,9 +125,9 @@ export default function ServiceCard({
           {/* // Tape */}
           <img
             src={tapeSrc}
-            className="absolute top-16 sm:top-3 left-1/2 w-2/5 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
+            className="absolute top-3 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
           />
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

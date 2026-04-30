@@ -6,7 +6,10 @@ const { hero } = siteData;
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col mb-[50px]">
+    <section
+      id="hero"
+      className="relative min-h-screen flex flex-col mb-[50px]"
+    >
       {/* ── Full-bleed Hero Bild ── */}
       <div className="relative flex-1 overflow-hidden">
         <picture>
@@ -14,16 +17,19 @@ export default function Hero() {
             media="(max-width: 640px) and (orientation: portrait)"
             srcSet={hero.imageSrcMobile}
           />
-          <source
-            media="(max-width: 1024px)"
-            srcSet={hero.imageSrcTablet}
-          />
+          <source media="(max-width: 1024px)" srcSet={hero.imageSrcTablet} />
           <img
             src={hero.imageSrcLaptop}
             alt={hero.imageAlt}
             className="w-full h-full object-cover object-top min-h-[75vh]"
           />
         </picture>
+        {/* <motion.img
+          src="/assets/flackern-weiß4.gif"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover mix-blend-screen opacity-20"
+        /> */}
       </div>
 
       {/* ── Tagline & Quote Block ── */}
@@ -44,6 +50,14 @@ export default function Hero() {
               >
                 {hero.tagline}
               </motion.h1>
+              {/* Pfeil auf Tagline-Ende */}
+              <img
+                src="/assets/pfeil.gif"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-28 sm:bottom-16 -right-20 sm:-right-48 w-36 sm:w-44 object-contain scale-x-[-1] -rotate-[30deg] sm:-rotate-12"
+                style={{ filter: "brightness(0)" }}
+              />
             </div>
           </div>
 
