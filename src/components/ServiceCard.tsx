@@ -80,7 +80,7 @@ export default function ServiceCard({
               >
                 <span
                   aria-hidden="true"
-                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#1a1a1a]/90"
+                  className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-[#1a1a1a]/90"
                 />
                 <span>{example}</span>
               </li>
@@ -98,9 +98,9 @@ export default function ServiceCard({
             prefersReducedMotion
               ? undefined
               : {
-                  x: 8,
-                  y: -4,
-                  rotate: imageLeft ? 1 : -1,
+                  x: 12,
+                  y: -8,
+                  rotate: imageLeft ? 3 : -3,
                   transition: { duration: 0.18, ease: "easeOut" },
                 }
           }

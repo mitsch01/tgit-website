@@ -23,7 +23,7 @@ export const siteData = {
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
     tagline: "Better work starts now.",
     quote:
-      '"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et."',
+      '"Als Fractional People Lead unterstütze ich Startups und Scaleups dabei, People & Organisation auf stabile, skalierbare Beine zu stellen. Ich bringe Struktur in wachsende Organisationen und setze um, statt nur zu konzipieren – fokussiert, pragmatisch und mit großem People Heart."',
   },
 
   // ── LEISTUNGEN ──────────────────────────────────────────────────────────────
@@ -39,11 +39,11 @@ export const siteData = {
         titleSize: { width: "250px" },
         titlePosition: { top: "50%", left: "50%" },
         description:
-          "Ich übernehme punktuell oder über einen definierten Zeitraum operative Verantwortung im People & HR-Bereich. Dabei spiele ich immer mit dem Ziel, gemeinsam mit dir und deinen Kolleg:innen etwas aufzubauen.",
+          "Ich übernehme Verantwortung in Phasen von Wachstum, Transformation oder Neuaufstellung (stundenweise bis fulltime) – integriert in eure Organisation und im engen Austausch mit dem Team.",
         cta: "BEISPIELE",
         examples: [
-          "Überbrückung von Vakanzen in People-/HR-Leadership-Rollen",
-          "Aufbau oder Neuausrichtung von People & Culture Strukturen",
+          "Vakanz-Überbrückung von People Rollen",
+          "ANeuaufbau / Neuausrichtung von People & Org Setups",
           "Change- und Transformationsbegleitung",
         ],
         assetSrc: "/assets/notizzettel1.png",
@@ -58,12 +58,13 @@ export const siteData = {
         titleSize: { width: "270px" },
         titlePosition: { top: "55%", left: "60%" },
         description:
-          "Du brauchst projektbasierte Unterstützung? Ich arbeite fokussiert und Ergebnis-orientiert daran, dein People-Projekt voranzutreiben – von Strategieentwicklung bis zur Umsetzung.",
+          "Ich arbeite an klar abgegrenzten Projekten rund um People & Organisation – von der Strategieentwicklung über Pilotierung und Iteration bis zur nachhaltigen Verankerung.",
         cta: "BEISPIELE",
         examples: [
-          "Organisationsdesign und Strukturaufbau",
-          "Kultur, Leadership und Zusammenarbeit",
-          "HR-Modelle, Prozesse und Operating Principles",
+          "Organisationsdesign & HR Operating Model",
+          "Compensation & Incentive Frameworks",
+          "Purpose, Values & Ways of Working",
+          "HR Audit & Process Design",
         ],
         assetSrc: "/assets/notizzettel3.png",
         assetAlt: "Projekt-Mandate",
@@ -77,12 +78,13 @@ export const siteData = {
         titleSize: { width: "250px" },
         titlePosition: { top: "60%", left: "60%" },
         description:
-          "Ich biete dir Sparring-Partnerschaft für Führungskräfte und Founder:innen in Wachstumsphasen und Veränderungen. Ich arbeite methodisch und nutze meine Erfahrung aus Startups und Scale-ups, um gemeinsam Lösungen zu entwickeln.",
+          "Ich begleite Founders, People Leads und Führungsteams als Sparringspartnerin in komplexen Wachstums- und Entscheidungssituationen – ohne Blaupause, erfahrungsbasiert und mit konkreten Ideen.",
         cta: "BEISPIELE",
         examples: [
-          "Sparring zu People-, Organisations- und Leadership-Themen",
-          "Reflexion von Führungsrollen, Strukturen und Entscheidungen",
-          "Begleitung von Führungsteams in Veränderungs- und Wachstumsphasen",
+          "HR-Strategieberatung",
+          "Sparring zu Leadership- & Organisationsfragen",
+          "Restrukturierung von Organisationen & Teams",
+          "Mentoring von HR Professionals",
         ],
         assetSrc: "/assets/notizzettel2.png",
         assetAlt: "Leadership Sparring",
@@ -96,13 +98,12 @@ export const siteData = {
         titleSize: { width: "260px" },
         titlePosition: { top: "53%", left: "60%" },
         description:
-          "Ich konzipiere und leite Workshops und Trainings für Teams und Führungskräfte. Ob Leadership-Development, Teambuilding oder spezifische HR-Themen – ich bringe Energie und Expertise.",
+          "Ich gestalte und moderiere Formate rund um Führung, Kultur und Zusammenarbeit – von punktuellen Sessions bis hin zu mehrteiligen Programmen. Inhalte und Ablauf entwickeln wir passend zu eurer Situation.",
         cta: "BEISPIELE",
         examples: [
-          "New Leadership und New Work",
-          "Kulturdynamiken und Wertearbeit",
-          "High Performance und Ways of Working",
-          "Strategie- und Teamworkshops",
+          "Leadership Development Journeys",
+          "High Performance & Team Dynamics",
+          "Candid Feedback & Gesprächsführung",
         ],
         assetSrc: "/assets/notizzettel4.png",
         assetAlt: "Workshops & Training",
@@ -114,13 +115,14 @@ export const siteData = {
 
   // ── ÜBER MICH ───────────────────────────────────────────────────────────────
   about: {
-    imageSrc: "/assets/contact3.jpg",
+    imageSrc: "/assets/contact3.png",
     imageAlt: "Katrin Schwerdtner",
     heading: "ÜBER MICH",
     paragraphs: [
-      "Als Interim & Fractional People Lead arbeite ich seit Jahren in einer Vielzahl von Startups und Scale-ups. Ich habe Führungspositionen im People Management übernommen, Teams aufgebaut und entwickelt, Transformationsprojekte geleitet und Unternehmen in kritischen Phasen begleitet.",
-      "Mein Schwerpunkt liegt auf der strategischen und operativen Arbeit an der Schnittstelle von People, Culture und Business. Ich bin überzeugt, dass gute Arbeitsbedingungen und starke Performance kein Widerspruch sind – und lebe das in jedem Mandat.",
-      "Es ist mir wichtig, nachhaltig und persönlich zu arbeiten – als vollwertiges Teammitglied auf Zeit, nicht als externe Beraterin auf Abstand.",
+      "Hi! Ich bin Katrin.",
+      "Im Konzern habe ich gelernt, in großen Systemen zu denken und zu agieren. In Startups und Scale-ups, schnell, pragmatisch und hands-on Wirkung zu erzeugen. Beides prägt meine Arbeit.",
+      "Als erfahrene HR-Führungskraft begleite ich Unternehmen in Wachstums- und Veränderungsphasen. Dabei verbinde ich strategischen Weitblick mit der Fähigkeit, im richtigen Moment operativ einzutauchen. Ich schaffe Orientierung im Chaos und entwickle tragfähige, skalierbare Strukturen – immer an der Schnittstelle von Businesszielen und People Needs. Zahlen und Dashboards geben mir Orientierung. Die feinen Zwischentöne im System auch.",
+      "Ich arbeite fokussiert, mit Tempo – und verliere auch in anspruchsvollen Momenten nicht meinen Humor. Noch nie. Bisher. Challenge me. ;)",
     ],
   },
 
@@ -130,15 +132,16 @@ export const siteData = {
     imageAlt: "",
     heading: "KONTAKT",
     intro:
-      "Ob Interim-Mandat, projektbasierte Unterstützung oder Sparring – ich freue mich über deine Nachricht und melde mich schnell bei dir zurück.",
+      "Ich freue mich über deine Nachricht und melde mich schnell bei dir zurück. Oder du buchst dir einfach direkt ein kurzes Intro. Unverbindlich natürlich.",
     // Visitenkarten-Daten
     name: "Katrin Schwerdtner",
-    role: "Interim & Fractional\nPeople Lead",
+    role: "Fractional People Lead & HR Advisor",
     location: "Hamburg & Fehmarn",
     email: "katrin@tgit.team",
     mobile: "+49 177 3477326",
-    // mailto-Link (kein Formular)
     mailtoHref: "mailto:katrin@tgit.team",
+    bookingText: "Book a 15 minutes Intro",
+    bookingLink: "https://calendar.app.google/iKfqRNGzyc6TccKeA",
   },
 
   // ── FOOTER ──────────────────────────────────────────────────────────────────
@@ -167,7 +170,7 @@ export const siteData = {
         {
           title: "Verantwortliche Stelle",
           paragraphs: [
-            "TGIT - Thank God It's Tuesday",
+            "Thank God It's Tuesday",
             "Katrin Schwerdtner",
             "Sahrensdorf 31",
             "23769 Fehmarn",
@@ -232,7 +235,7 @@ export const siteData = {
           paragraphs: [
             "Katrin Schwerdtner",
             "Unternehmensberaterin (Deutschland)",
-            "TGIT - Thank God It's Tuesday",
+            "Thank God It's Tuesday",
             "",
             "Sahrensdorf 31",
             "23769 Fehmarn",
@@ -244,17 +247,9 @@ export const siteData = {
         },
         {
           title: "Steuerliche Angaben",
-          options: [
-            {
-              label: "OPTION A - falls umsatzsteuerpflichtig",
-              text: "Umsatzsteuer-Identifikationsnummer gemaess § 27a UStG: DE[XXXXXXXXX]",
-            },
-            {
-              label: "OPTION B - falls Kleinunternehmerin nach § 19 UStG",
-              text: "Gemaess § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).",
-            },
-          ],
+          text: "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE460226275",
         },
+
         {
           title: "Verantwortlich fuer den Inhalt nach § 18 Abs. 2 MStV",
           paragraphs: ["Katrin Schwerdtner", "Sahrensdorf 31", "23769 Fehmarn"],
