@@ -6,12 +6,12 @@ const { hero } = siteData;
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col mb-[50px]"
-    >
-      {/* ── Full-bleed Hero Bild ── */}
-      <div className="relative flex-1 overflow-hidden">
+    <>
+      <section
+        id="hero"
+        className="relative h-screen overflow-hidden"
+      >
+        {/* ── Full-bleed Hero Bild ── */}
         <picture>
           <source
             media="(max-width: 640px) and (orientation: portrait)"
@@ -21,19 +21,12 @@ export default function Hero() {
           <img
             src={hero.imageSrcLaptop}
             alt={hero.imageAlt}
-            className="w-full h-full object-cover object-top min-h-[75vh]"
-          />
+            className="w-full h-full object-cover object-top" />
         </picture>
-        {/* <motion.img
-          src="/assets/flackern-weiß4.gif"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover mix-blend-screen opacity-20"
-        /> */}
-      </div>
+      </section>
 
       {/* ── Tagline & Quote Block ── */}
-      <div
+      <section
         className="bg-[var(--color-brand-white)] text-center px-6 md:px-16 md:py-12"
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
@@ -73,7 +66,7 @@ export default function Hero() {
             {hero.quote}
           </motion.p>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

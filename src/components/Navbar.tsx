@@ -12,8 +12,7 @@ export default function Navbar() {
   const isHome = location.pathname === "/";
   const isLight = !isHome || scrolled || menuOpen;
   const menuBarColor = isLight ? "bg-[var(--color-brand-black)]" : "bg-white";
-  const menuBarBaseClass =
-    "block h-1 w-8 transition-all duration-300 sm:h-[5px] sm:w-9";
+  const menuBarBaseClass = "block h-[4px] w-8 md:h-1 md:w-9 transition-all duration-300";
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -63,37 +62,37 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isVisible || menuOpen ? "translate-y-0" : "-translate-y-full"
-      } ${scrolled || isLight ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent"}`}
+      className={`fixed top-4 sm-top-8 left-0 right-0 z-50 transition-all duration-300 ${isVisible || menuOpen ? "translate-y-0" : "-translate-y-full"
+        } ${scrolled || isLight ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent"}`}
     >
-      <nav className="relative min-w-0 px-2 pr-12 sm:px-6 sm:pr-16 md:px-10 md:pr-20">
+      <nav className="flex items-center justify-between h-20 md:h-24 px-6 sm:px-8 md:px-12">
         {/* Logo */}
         <img
           src={
             isLight ? siteData.nav["logo-black"] : siteData.nav["logo-white"]
           }
-          className={`h-auto object-contain transition-opacity duration-300 w-36 lg:w-48 ${isLight ? "opacity-100" : "opacity-20"}`}
+          className={`h-12 md:h-16 mt-[12px] w-auto object-contain transition-opacity duration-300 ${isLight ? "opacity-100" : "opacity-40"}`}
           onClick={(e) => {
             e.preventDefault();
             navigate("/");
           }}
+          style={{ filter: "drop-shadow(0 1px 10px rgba(0,0,0,0.2))" }}
         ></img>
 
         {/* Menu Closed */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="absolute right-8 top-12 md:top-14 lg:top-20 flex -translate-y-1/2 flex-col cursor-pointer gap-1.5 px-2"
+          className="flex flex-col cursor-pointer gap-1.5"
           aria-label="Menü öffnen"
         >
           <span
-            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "rotate-45 translate-y-[11px]" : ""}`}
+            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "rotate-45 translate-y-[9px] md:translate-y-[11px]" : ""}`}
           />
           <span
             className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "-rotate-45 -translate-y-[11px]" : ""}`}
+            className={`${menuBarBaseClass} ${menuBarColor} ${menuOpen ? "-rotate-45 -translate-y-[9px] md:-translate-y-[11px]" : ""}`}
           />
         </button>
       </nav>
