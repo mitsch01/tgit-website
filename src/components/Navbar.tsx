@@ -71,7 +71,7 @@ export default function Navbar() {
           src={
             isLight ? siteData.nav["logo-black"] : siteData.nav["logo-white"]
           }
-          className={`h-12 md:h-16 mt-[12px] w-auto object-contain transition-opacity duration-300 ${isLight ? "opacity-100" : "opacity-40"}`}
+          className={`h-14 md:h-16 mt-[12px] w-auto object-contain transition-opacity duration-300 ${isLight ? "opacity-100" : "opacity-90"}`}
           onClick={(e) => {
             e.preventDefault();
             navigate("/");

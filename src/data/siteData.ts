@@ -17,7 +17,7 @@ export const siteData = {
 
   // ── HERO ────────────────────────────────────────────────────────────────────
   hero: {
-    imageSrcLaptop: "/assets/Hero.jpg",
+    imageSrcLaptop: "/assets/hero-desktop.jpg",
     imageSrcTablet: "/assets/hero-tablet.jpg",
     imageSrcMobile: "/assets/hero-mobile.jpg",
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
