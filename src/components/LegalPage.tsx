@@ -68,50 +68,34 @@ export default function LegalPage({ pageKey }: LegalPageProps) {
 
               {"paragraphs" in section && section.paragraphs
                 ? section.paragraphs.map((paragraph, idx) => {
-                    if (paragraph.trim() === "") {
-                      return (
-                        <div
-                          key={`${section.title}-space-${idx}`}
-                          className="h-3"
-                        />
-                      );
-                    }
-
+                  if (paragraph.trim() === "") {
                     return (
-                      <p
-                        key={`${section.title}-p-${idx}`}
-                        className="mt-1 leading-relaxed"
-                      >
-                        {renderTextWithLinks(paragraph)}
-                      </p>
+                      <div
+                        key={`${section.title}-space-${idx}`}
+                        className="h-3"
+                      />
                     );
-                  })
+                  }
+
+                  return (
+                    <p
+                      key={`${section.title}-p-${idx}`}
+                      className="mt-1 leading-relaxed"
+                    >
+                      {renderTextWithLinks(paragraph)}
+                    </p>
+                  );
+                })
                 : null}
 
               {"bullets" in section &&
-              section.bullets &&
-              section.bullets.length > 0 ? (
+                section.bullets &&
+                section.bullets.length > 0 ? (
                 <ul className="mt-3 list-disc space-y-1 pl-5">
                   {section.bullets.map((bullet) => (
                     <li key={bullet}>{renderTextWithLinks(bullet)}</li>
                   ))}
                 </ul>
-              ) : null}
-
-              {"options" in section &&
-              section.options &&
-              section.options.length > 0 ? (
-                <div className="mt-3 space-y-2">
-                  {section.options.map((option) => (
-                    <div
-                      key={option.label}
-                      className="border border-dashed border-black/25 bg-white/60 p-3"
-                    >
-                      <p className="mb-1 font-semibold">{option.label}</p>
-                      <p>{renderTextWithLinks(option.text)}</p>
-                    </div>
-                  ))}
-                </div>
               ) : null}
             </section>
           ))}
