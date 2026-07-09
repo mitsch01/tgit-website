@@ -23,6 +23,8 @@ export default function Hero() {
             alt={hero.imageAlt}
             className="w-full h-full object-cover object-top" />
         </picture>
+
+       
       </section>
 
       {/* ── Tagline & Quote Block ── */}
@@ -43,14 +45,7 @@ export default function Hero() {
               >
                 {hero.tagline}
               </motion.h1>
-              {/* Pfeil auf Tagline-Ende */}
-              <img
-                src="/assets/pfeil.gif"
-                alt=""
-                aria-hidden="true"
-                className="pointer-events-none absolute bottom-28 sm:bottom-16 -right-20 sm:-right-48 w-36 sm:w-44 object-contain scale-x-[-1] -rotate-[30deg] sm:-rotate-12"
-                style={{ filter: "brightness(0)" }}
-              />
+
             </div>
           </div>
 
@@ -67,6 +62,15 @@ export default function Hero() {
           </motion.p>
         </div>
       </section>
+
+       {/* Scroll-Pfeil: mittig unten, immer sichtbar, zeigt nach unten */}
+        <img
+          src="/assets/pfeil.gif"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-20 right-1 md:right-8 lg:right-1/4 -translate-x-1/2 w-24 md:w-32 object-contain scale-x-[-1] -rotate-[60deg] md:-rotate-[40deg]"
+          style={{ filter: "brightness(0)" }}
+        />
     </>
   );
 }
