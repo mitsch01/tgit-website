@@ -38,15 +38,14 @@ export default function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="mx-auto grid w-full max-w-[46rem] grid-cols-1 items-start gap-8 border-b border-gray-200 py-24 md:grid-cols-2 md:gap-16 md:py-14"
+      className="mx-auto grid w-full max-w-[46rem] grid-cols-1 items-start gap-8 md:border-b md:border-gray-200 md:grid-cols-2 md:gap-16 py-14"
     >
       {/* Text-Seite */}
       <div
-        className={`order-2 flex w-full max-w-80 flex-col gap-4 mx-auto ${
-          imageLeft
+        className={`order-2 flex w-full max-w-80 flex-col gap-4 mx-auto ${imageLeft
             ? "md:order-2 md:ml-auto md:mr-0"
             : "md:order-1 md:ml-0 md:mr-auto"
-        }`}
+          }`}
       >
         <p
           className="text-base md:text-lg leading-relaxed opacity-70"
@@ -98,15 +97,14 @@ export default function ServiceCard({
             prefersReducedMotion
               ? undefined
               : {
-                  x: 12,
-                  y: -8,
-                  rotate: imageLeft ? 3 : -3,
-                  transition: { duration: 0.18, ease: "easeOut" },
-                }
+                x: 12,
+                y: -8,
+                rotate: imageLeft ? 3 : -3,
+                transition: { duration: 0.18, ease: "easeOut" },
+              }
           }
-          className={`relative w-full max-w-80 mx-auto ${
-            imageLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
-          } ${titleAlt === "Leadership Sparring" ? "rotate-3" : ""}`}
+          className={`relative w-full max-w-80 mx-auto ${imageLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
+            } ${titleAlt === "Leadership Sparring" ? "rotate-3" : ""}`}
           style={{ transformOrigin: "50% 10%" }}
         >
           {/* // Notizzettel */}

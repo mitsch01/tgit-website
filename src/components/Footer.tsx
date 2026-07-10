@@ -1,14 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { siteData } from "../data/siteData";
+
 
 const { footer } = siteData;
 
 export default function Footer() {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/");
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
+
   return (
-    <footer className="bg-[var(--color-brand-black)] text-white px-6 md:px-16 py-16">
+    <footer className="relative bg-[var(--color-brand-black)] text-white px-6 md:px-16 py-16">
       <div className="flex flex-col items-center gap-10">
         {/* Brand-Schriftzug */}
-        <img src={footer.logo} width={200} alt="Footer Logo" className="mb-4" />
+        <img
+          src={footer.logo}
+          width={200}
+          alt="Footer Logo"
+          className="mb-4 cursor-pointer"
+          onClick={handleLogoClick}
+        />
 
         {/* Social Icon */}
         <div className="flex gap-4">
@@ -42,6 +58,12 @@ export default function Footer() {
         {/* Credit */}
         <p className="text-xs text-white/40">{footer.credit}</p>
       </div>
+      <img
+        src="/assets/doodles/doodle-lightbulb.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden md:block absolute right-1 top-20 w-20 -translate-x-1/2 -translate-y-1/2 pointer-events-none invert"
+      />
     </footer>
   );
 }

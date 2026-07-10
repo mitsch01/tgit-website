@@ -115,7 +115,7 @@ export const siteData = {
 
   // ── ÜBER MICH ───────────────────────────────────────────────────────────────
   about: {
-    imageSrc: "/assets/photos/contact3.png",
+    imageSrc: "/assets/photos/contact.jpg",
     imageAlt: "Katrin Schwerdtner",
     heading: "ÜBER MICH",
     paragraphs: [
@@ -247,7 +247,7 @@ export const siteData = {
         },
         {
           title: "Steuerliche Angaben",
-          text: "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE460226275",
+          paragraphs: "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE460226275",
         },
 
         {

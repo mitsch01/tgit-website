@@ -36,14 +36,14 @@ export default function LegalPage({ pageKey }: LegalPageProps) {
   const page = siteData.legalPages[pageKey];
 
   return (
-    <main className="bg-[var(--color-brand-white)] pb-24 pt-56">
+    <main className="bg-[var(--color-brand-white)] pb-24 pt-48 sm:pt-56">
       <div className="mx-auto max-w-[50rem] px-6 md:px-16">
         <div className="relative mb-6 text-center">
           <img
             src="/assets/elements/highlighter3.png"
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-12 w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
+            className="pointer-events-none absolute left-1/2 top-10 sm:top-12 w-64 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
           />
           <h1 className="relative font-heading text-4xl font-bold md:text-5xl">
             {page.heading}
@@ -67,7 +67,10 @@ export default function LegalPage({ pageKey }: LegalPageProps) {
               </h2>
 
               {"paragraphs" in section && section.paragraphs
-                ? section.paragraphs.map((paragraph, idx) => {
+                ? (Array.isArray(section.paragraphs)
+                  ? section.paragraphs
+                  : [section.paragraphs]
+                ).map((paragraph: string, idx: number) => {
                   if (paragraph.trim() === "") {
                     return (
                       <div

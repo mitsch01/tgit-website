@@ -62,8 +62,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-4 sm-top-8 left-0 right-0 z-50 transition-all duration-300 ${isVisible || menuOpen ? "translate-y-0" : "-translate-y-full"
-        } ${scrolled || isLight ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent"}`}
+      className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isVisible || menuOpen ? "translate-y-0" : "-translate-y-full"
+        } ${scrolled || isLight ? "bg-[var(--color-brand-white)] shadow-sm" : "bg-transparent pt-4"}`}
     >
       <nav className="flex items-center justify-between h-20 md:h-24 px-6 sm:px-8 md:px-12">
         {/* Logo */}
@@ -76,7 +76,7 @@ export default function Navbar() {
             e.preventDefault();
             navigate("/");
           }}
-          style={{ filter: "drop-shadow(0 1px 10px rgba(0,0,0,0.2))" }}
+          style={isLight ? undefined : { filter: "drop-shadow(0 1px 10px rgba(0,0,0,0.2))" }}
         ></img>
 
         {/* Menu Closed */}

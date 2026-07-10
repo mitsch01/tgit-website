@@ -72,7 +72,7 @@ export default function Contact() {
     controls.set({
       x: 0,
       y: 0,
-      rotate: 7,
+      rotate: 0,
       scale: 1,
       boxShadow: "none",
     });
@@ -98,7 +98,7 @@ export default function Contact() {
         void controls.start({
           x: 0,
           y: 0,
-          rotate: 7,
+          rotate: 0,
           scale: 1,
           boxShadow: "none",
           transition: { duration: 0.28, ease: "easeOut" },
@@ -116,7 +116,7 @@ export default function Contact() {
         void controls.start({
           x: 0,
           y: 0,
-          rotate: 7,
+          rotate: 0,
           scale: 1,
           boxShadow: "none",
           transition: { duration: 0.28, ease: "easeOut" },
@@ -153,7 +153,7 @@ export default function Contact() {
     void controls.start({
       x: 0,
       y: 0,
-      rotate: 7,
+      rotate: 0,
       scale: 1,
       boxShadow: "none",
       transition: { duration: 0.28, ease: "easeOut" },
@@ -233,222 +233,208 @@ export default function Contact() {
   };
 
   return (
-    <section id="kontakt" className="bg-[var(--color-brand-white)] py-36 mb-36">
-      <div
-        className="px-6 md:px-16"
-        style={{ maxWidth: "60rem", margin: "0 auto" }}
-      >
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="relative font-heading text-4xl font-bold text-center md:text-5xl mx-auto"
+    <div className="relative">
+      <section id="kontakt" className="bg-[var(--color-brand-white)] py-36 mb-36">
+        <div
+          className="px-6 md:px-16"
+          style={{ maxWidth: "60rem", margin: "0 auto" }}
         >
-          <img
-            src="/assets/elements/highlighter3.png"
-            alt=""
-            className="left-1/2 top-12 w-2/3 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply absolute"
-          />
-          {contact.heading}
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="max-w-xl leading-relaxed mt-32 opacity-70 text-base md:text-lg text-center mx-auto"
-          style={{ color: "var(--color-brand-text)" }}
-        >
-          {contact.intro}
-        </motion.p>
-
-        <div className="relative mt-20 md:grid md:grid-cols-2 md:items-start bg-transparent max-w-xl mx-auto">
-          <div
-            className="hidden md:flex md:items-center md:justify-center"
-            aria-hidden="true"
-          >
-            <img
-              src="/assets/elements/pfeil.gif"
-              alt=""
-              className="h-auto w-1/2 max-w-[17rem] object-contain"
-              style={{ filter: "brightness(0) saturate(100%)" }}
-            />
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative  md:justify-self-end"
+            transition={{ duration: 0.5 }}
+            className="relative font-heading text-4xl font-bold text-center md:text-5xl mx-auto"
           >
-            <motion.button
-              ref={noteRef}
-              type="button"
-              animate={controls}
-              initial={false}
-              whileHover={
-                isDialogOpen || prefersReducedMotion
-                  ? undefined
-                  : {
-                    y: -6,
-                    rotate: 5.8,
-                    scale: 1.01,
+            <img
+              src="/assets/elements/highlighter3.png"
+              alt=""
+              className="left-1/2 top-12 w-2/3 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply absolute"
+            />
+            {contact.heading}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="max-w-xl leading-relaxed mt-32 opacity-70 text-base md:text-lg text-center mx-auto"
+            style={{ color: "var(--color-brand-text)" }}
+          >
+            {contact.intro}
+          </motion.p>
+          <div className="relative mt-20  bg-transparent max-w-xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <motion.button
+                ref={noteRef}
+                type="button"
+                animate={controls}
+                initial={false}
+                whileHover={
+                  isDialogOpen || prefersReducedMotion
+                    ? undefined
+                    : {
+                      y: -6,
+                      rotate: -2,
+                      scale: 1.01,
+                      boxShadow: "none",
+                      transition: { duration: 0.1, ease: "easeOut" },
+                    }
+                }
+                onHoverEnd={() => {
+                  if (isDialogOpen || prefersReducedMotion) {
+                    return;
+                  }
+                  void controls.start({
+                    x: 0,
+                    y: 0,
+                    rotate: 0,
+                    scale: 1,
                     boxShadow: "none",
                     transition: { duration: 0.1, ease: "easeOut" },
+                  });
+                }}
+                onClick={(event) => {
+                  if (!isDialogOpen) {
+                    void openDialog(event.clientX, event.clientY);
                   }
-              }
-              onHoverEnd={() => {
-                if (isDialogOpen || prefersReducedMotion) {
-                  return;
-                }
-
-                void controls.start({
-                  x: 0,
-                  y: 0,
-                  rotate: 7,
-                  scale: 1,
-                  boxShadow: "none",
-                  transition: { duration: 0.1, ease: "easeOut" },
-                });
-              }}
-              onClick={(event) => {
-                if (!isDialogOpen) {
-                  void openDialog(event.clientX, event.clientY);
-                }
-              }}
-              aria-expanded={isDialogOpen}
-              aria-controls="contact-save-dialog"
-              aria-label="Kontakt als vCard speichern"
-              className="relative mx-auto block w-full max-w-[18rem] cursor-pointer overflow-visible text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)] focus-visible:ring-offset-4"
-              style={{ transformOrigin: "18% 8%" }}
-            >
-              <div className="absolute -top-2 left-[52%] z-20 h-8 w-36 -translate-x-1/2 -rotate-2">
+                }}
+                aria-expanded={isDialogOpen}
+                aria-controls="contact-save-dialog"
+                aria-label="Kontakt als vCard speichern"
+                className="relative mx-auto block w-full max-w-[18rem] cursor-pointer overflow-visible text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)] focus-visible:ring-offset-4"
+              >
+                <div className="absolute -top-6 left-[45%] z-20 -translate-x-1/2 -rotate-[24deg]">
+                  <img
+                    src="/assets/doodles/doodle-paperclip.png"
+                    alt=""
+                    className="w-12 object-contain opacity-95"
+                    aria-hidden="true"
+                  />
+                </div>
                 <img
-                  src="/assets/elements/pin-black.png"
-                  alt=""
-                  className="h-full w-full object-contain opacity-95"
+                  src={contact.imageSrc}
+                  alt={contact.imageAlt || ""}
+                  className="block h-auto w-full object-contain pointer-events-none"
                   aria-hidden="true"
                 />
-              </div>
-
-              <img
-                src={contact.imageSrc}
-                alt={contact.imageAlt || ""}
-                className="block h-auto w-full object-contain pointer-events-none"
-                aria-hidden="true"
-              />
-
-              <div className="absolute inset-x-[13%] bottom-[11%] top-[13.5%] z-10 flex flex-col gap-2">
-                <p className="font-heading text-2xl mb-4">{contact.name}</p>
-                <p
-                  className="text-sm font-medium uppercase tracking-[0.24em] whitespace-pre-line opacity-60"
-                  style={{ color: "var(--color-brand-text)" }}
-                >
-                  {contact.role}
-                </p>
-                <div className="my-[18.5px] h-px w-full" />
-                <p
-                  className="text-sm opacity-70"
-                  style={{ color: "var(--color-brand-text)" }}
-                >
-                  {contact.location}
-                </p>
-                <p className="text-sm leading-[0.1em]">
-                  <span
-                    className="mr-2 text-xs uppercase tracking-[0.2em]  opacity-50"
+                <div className="absolute inset-x-[13%] bottom-[11%] top-[13%] z-10 flex flex-col gap-2">
+                  <p className="font-heading text-2xl mb-4">{contact.name}</p>
+                  <p
+                    className="text-sm font-medium uppercase tracking-[0.1em] whitespace-pre-line opacity-60"
                     style={{ color: "var(--color-brand-text)" }}
                   >
-                    E-Mail
-                  </span>
-                  <span className="underline decoration-[rgba(15,15,15,0.26)] underline-offset-2">
-                    {contact.email}
-                  </span>
-                </p>
-                <p className="text-sm leading-[0.1em]">
-                  <span
-                    className="mr-2 text-xs uppercase tracking-[0.22em]  opacity-50"
-                    style={{ color: "var(--color-brand-text)" }}
+                    {contact.role}
+                  </p>
+                  <div className="my-[18.7px] h-px w-full " />
+                  <div className="opacity-70 text-sm ">
+                    <p className="pb-[6px]"
+                    >
+                      {contact.location}
+                    </p>
+                    <p >
+                      <span className="mr-2"
+                      >
+                        E-Mail:
+                      </span>
+                      <span >
+                        {contact.email}
+                      </span>
+                    </p>
+                    <p >
+                      <span
+                        className="mr-2"
+                      >
+                        Mobile:
+                      </span>
+                      <span>{contact.mobile}</span>
+                    </p>
+                  </div>
+                  <p
+                    className="mt-[50px] text-sm opacity-70 text-right underline"
                   >
-                    Mobile
-                  </span>
-                  <span>{contact.mobile}</span>
-                </p>
-                <p
-                  className="mt-[50px] pt-5 text-xs uppercase tracking-[0.28em] opacity-55"
-                  style={{ color: "var(--color-brand-text)" }}
-                >
-                  Klick to save contact
-                </p>
-              </div>
-            </motion.button>
-
-            <motion.div
-              id="contact-save-dialog"
-              ref={dialogRef}
-              initial={false}
-              animate={{
-                opacity: isDialogOpen ? 1 : 0,
-                scale: isDialogOpen ? 1 : 0.92,
-                pointerEvents: isDialogOpen ? "auto" : "none",
-              }}
-              transition={{ duration: 0.18, ease: "easeOut" }}
-              role="dialog"
-              aria-modal="false"
-              aria-label="Kontakt speichern"
-              className="fixed z-30 w-[220px] rounded-[1.25rem] border border-[rgba(15,15,15,0.1)] bg-[rgba(255,255,255,0.96)] p-4 shadow-[0_22px_50px_rgba(15,15,15,0.18)] backdrop-blur-sm"
-              style={{ top: dialogPosition.y, left: dialogPosition.x }}
-            >
-              <button
-                type="button"
-                onClick={closeDialog}
-                aria-label="Dialog schliessen"
-                className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full text-base text-[var(--color-brand-text)]/70 transition-colors hover:bg-[rgba(15,15,15,0.06)] hover:text-[var(--color-brand-black)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)]"
-              >
-                x
-              </button>
-
-              <p className="pr-8 font-heading text-xl">Kontakt speichern</p>
-              <p
-                className="mt-2 text-sm leading-relaxed opacity-70"
-                style={{ color: "var(--color-brand-text)" }}
-              >
-                Lade dir meine Kontaktdaten als vCard herunter.
-              </p>
-
-              <button
-                ref={saveButtonRef}
-                type="button"
-                onClick={() => {
-                  void handleSaveContact();
+                    Klick to save contact
+                  </p>
+                  <img src="/assets/doodles/doodle-smiley.png" alt="hidden" className="w-8 self-end"/>
+                </div>
+              </motion.button>
+              <motion.div
+                id="contact-save-dialog"
+                ref={dialogRef}
+                initial={false}
+                animate={{
+                  opacity: isDialogOpen ? 1 : 0,
+                  scale: isDialogOpen ? 1 : 0.92,
+                  pointerEvents: isDialogOpen ? "auto" : "none",
                 }}
-                disabled={isDownloading}
-                className="mt-4 inline-flex items-center rounded-full bg-[var(--color-brand-yellow)] px-4 py-2 text-sm font-medium text-[var(--color-brand-black)] transition-transform hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)] disabled:cursor-wait disabled:opacity-70"
+                transition={{ duration: 0.18, ease: "easeOut" }}
+                role="dialog"
+                aria-modal="false"
+                aria-label="Kontakt speichern"
+                className="fixed z-30 w-[220px] rounded-[1.25rem] border border-[rgba(15,15,15,0.1)] bg-[rgba(255,255,255,0.96)] p-4 shadow-[0_22px_50px_rgba(15,15,15,0.18)] backdrop-blur-sm"
+                style={{ top: dialogPosition.y, left: dialogPosition.x }}
               >
-                {isDownloading ? "Speichert..." : "Speichern"}
-              </button>
+                <button
+                  type="button"
+                  onClick={closeDialog}
+                  aria-label="Dialog schliessen"
+                  className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full text-base text-[var(--color-brand-text)]/70 transition-colors hover:bg-[rgba(15,15,15,0.06)] hover:text-[var(--color-brand-black)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)]"
+                >
+                  x
+                </button>
+                <p className="pr-8 font-heading text-xl">Kontakt speichern</p>
+                <p
+                  className="mt-2 text-sm leading-relaxed opacity-70"
+                  style={{ color: "var(--color-brand-text)" }}
+                >
+                  Lade dir meine Kontaktdaten als vCard herunter.
+                </p>
+                <button
+                  ref={saveButtonRef}
+                  type="button"
+                  onClick={() => {
+                    void handleSaveContact();
+                  }}
+                  disabled={isDownloading}
+                  className="mt-4 inline-flex items-center rounded-full bg-[var(--color-brand-yellow)] px-4 py-2 text-sm font-medium text-[var(--color-brand-black)] transition-transform hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-black)] disabled:cursor-wait disabled:opacity-70"
+                >
+                  {isDownloading ? "Speichert..." : "Speichern"}
+                </button>
+              </motion.div>
             </motion.div>
+          </div>
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.35 }}
+            className="mt-24 mx-auto text-center"
+          >
+            <a
+              href={contact.mailtoHref}
+              className="inline-block bg-[var(--color-brand-yellow)] text-[var(--color-brand-black)] font-medium px-8 py-4 tracking-wide hover:brightness-110 transition-all"
+            >
+              Nachricht schreiben
+            </a>
           </motion.div>
         </div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.35 }}
-          className="mt-24 mx-auto text-center"
-        >
-          <a
-            href={contact.mailtoHref}
-            className="inline-block bg-[var(--color-brand-yellow)] text-[var(--color-brand-black)] font-medium px-8 py-4 tracking-wide hover:brightness-110 transition-all"
-          >
-            Nachricht schreiben
-          </a>
-        </motion.div>
-      </div>
-    </section>
+      </section>
+      <video
+        src="/assets/doodles/doodle-coffee.mp4"
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-36 left-1/2 z-50 w-44 -translate-x-1/2"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+      />
+    </div>
   );
 }

@@ -1,20 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 
 const VISIBLE = 6;
-const ITEM_PX = 48; // w-12
-const GAP_PX = 32; // gap-8
+const ITEM_PX = 128;
+const GAP_PX = 40;
 const STEP_PX = ITEM_PX + GAP_PX;
 const CONTAINER_PX = VISIBLE * ITEM_PX + (VISIBLE - 1) * GAP_PX; // 544px
 
 const logos = [
-  // Platzhalter: Schwarze Kreise
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder",
+  "/assets/logos/common-purpose-logo.png",
+  "/assets/logos/encentive-logo.png",
+  "/assets/logos/newpay-logo.png",
+  "/assets/logos/r3-robotics-logo.png",
+  "/assets/logos/synera-logo.png",
+  "/assets/logos/tomorrow_logo.svg",
+  "/assets/logos/whera-logo.png",
 ];
 
 const isCarousel = logos.length > VISIBLE;
@@ -60,9 +59,9 @@ export default function References() {
 
   return (
     <section className="bg-[var(--color-brand-gray)] py-16">
-      <div className="text-center mb-8">
+      <div className="text-center mt-8">
         <p className="text-[var(--color-brand-text)]">
-          Trusted by the world's best companies
+          Trusted by the world's best companies:
         </p>
       </div>
 
@@ -78,21 +77,27 @@ export default function References() {
               transition: animated ? "transform 0.65s ease-in-out" : "none",
             }}
           >
-            {track.map((_, i) => (
-              <div
+            {/* Carousel */}
+            {track.map((src, i) => (
+              <img
                 key={i}
+                src={src}
+                alt=""
                 style={{ flexShrink: 0, width: ITEM_PX, height: ITEM_PX }}
-                className="rounded-full bg-black opacity-80"
+                className="object-contain opacity-70 grayscale"
               />
             ))}
           </div>
         ) : (
           <div style={{ display: "flex", gap: GAP_PX }}>
-            {logos.map((_, i) => (
-              <div
+            {/* Static (falls ≤ VISIBLE) */}
+            {logos.map((src, i) => (
+              <img
                 key={i}
+                src={src}
+                alt=""
                 style={{ width: ITEM_PX, height: ITEM_PX }}
-                className="rounded-full bg-black opacity-80"
+                className="object-contain opacity-70 grayscale"
               />
             ))}
           </div>

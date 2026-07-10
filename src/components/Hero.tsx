@@ -6,7 +6,7 @@ const { hero } = siteData;
 
 export default function Hero() {
   return (
-    <div className="relative">
+    <>
       {/* ── SECTION 1: Bild, immer 100vh ── */}
       <section id="hero" className="relative h-screen overflow-hidden">
         <picture>
@@ -33,12 +33,17 @@ export default function Hero() {
             {/* Doodle-Rock: farbig via CSS-Maske, sitzt hinter/über dem Titel */}
             <motion.div
               aria-hidden="true"
-              animate={{ scale: [1, 1.06, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              // animate={{
+              //   x: [0, -4, 4, -4, 0],
+              //   rotate: [0, -2, 2, -2, 0],
+              //   scale: [1, 1.02, 1, 1.01, 1],
+              // }}
+              transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut" }}
               className="pointer-events-none absolute bottom-2 md:bottom-10 lg:bottom-16 lg:-left-20 w-36 sm:w-48 md:w-56 lg:w-80 z-0"
               style={{
                 aspectRatio: "4419 / 6250",
                 backgroundColor: "var(--color-brand-yellow)",
+                transformOrigin: "50% 65%",
                 WebkitMaskImage: "url('/assets/doodles/doodle-rock.png')",
                 maskImage: "url('/assets/doodles/doodle-rock.png')",
                 WebkitMaskSize: "contain",
@@ -55,7 +60,7 @@ export default function Hero() {
               src="/assets/brand/thank-god-its-tuesday_white.png"
               alt="Thank god it's Tuesday"
               className="relative z-10 -bottom-12 md:top-8 w-72 sm:w-96 md:w-[28rem] lg:w-[40rem] object-contain"
-              style={{filter: "drop-shadow(2px 12px 50px rgba(0,0,0,0.7))"}}
+              style={{ filter: "drop-shadow(2px 12px 50px rgba(0,0,0,0.4))" }}
             />
           </div>
         </motion.div>
@@ -66,6 +71,7 @@ export default function Hero() {
         className="bg-[var(--color-brand-white)] text-center px-6 md:px-16 md:py-12"
         style={{ maxWidth: "60rem", margin: "0 auto" }}
       >
+
         <div>
           {/* Tagline */}
           <div className="mt-36 mb-4 md:mb-8 text-center">
@@ -97,16 +103,13 @@ export default function Hero() {
             {hero.quote}
           </motion.p>
         </div>
+        <img
+          src="/assets/doodles/doodle-ok.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none justify-self-center w-36 md:w-48 mt-8 scale-x-[-1] "
+        />
       </section>
-
-      {/* Scroll-Pfeil: mittig unten, immer sichtbar, zeigt nach unten */}
-      <img
-        src="/assets/elements/pfeil.gif"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-20 right-1 md:right-8 lg:right-1/4 -translate-x-1/2 w-24 md:w-32 object-contain scale-x-[-1] -rotate-[60deg] md:-rotate-[40deg]"
-        style={{ filter: "brightness(0)" }}
-      />
-    </div>
+    </>
   );
 }
