@@ -6,8 +6,8 @@
 export const siteData = {
   // ── NAVIGATION ──────────────────────────────────────────────────────────────
   nav: {
-    "logo-black": "/assets/tgit-black.png",
-    "logo-white": "/assets/tgit-white.png",
+    "logo-black": "/assets/brand/tgit-black.png",
+    "logo-white": "/assets/brand/tgit-white.png",
     links: [
       { label: "Leistungen", href: "#leistungen" },
       { label: "Über mich", href: "#ueber-mich" },
@@ -17,9 +17,9 @@ export const siteData = {
 
   // ── HERO ────────────────────────────────────────────────────────────────────
   hero: {
-    imageSrcLaptop: "/assets/hero-desktop.jpg",
-    imageSrcTablet: "/assets/hero-tablet.jpg",
-    imageSrcMobile: "/assets/hero-mobile.jpg",
+    imageSrcLaptop: "/assets/photos/hero-desktop.jpg",
+    imageSrcTablet: "/assets/photos/hero-tablet.jpg",
+    imageSrcMobile: "/assets/photos/hero-mobile.jpg",
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
     tagline: "Better work starts now.",
     quote:
@@ -34,7 +34,7 @@ export const siteData = {
       {
         id: "interim",
         // title: "Interim & Fractional Management",
-        titleSrc: "/assets/interim.png",
+        titleSrc: "/assets/notes/interim.png",
         titleAlt: "Interim & Fractional Management",
         titleSize: { width: "250px" },
         titlePosition: { top: "50%", left: "50%" },
@@ -46,14 +46,14 @@ export const siteData = {
           "ANeuaufbau / Neuausrichtung von People & Org Setups",
           "Change- und Transformationsbegleitung",
         ],
-        assetSrc: "/assets/notizzettel1.png",
+        assetSrc: "/assets/elements/notizzettel1.png",
         assetAlt: "Interim & Fractional Management",
-        tapeSrc: "/assets/tape-white-1.png",
+        tapeSrc: "/assets/elements/tape-white-1.png",
         imageLeft: false, // Text links, Bild rechts
       },
       {
         id: "projekte",
-        titleSrc: "/assets/projekt.png",
+        titleSrc: "/assets/notes/projekt.png",
         titleAlt: "Projekt-Mandate",
         titleSize: { width: "270px" },
         titlePosition: { top: "55%", left: "60%" },
@@ -66,14 +66,14 @@ export const siteData = {
           "Purpose, Values & Ways of Working",
           "HR Audit & Process Design",
         ],
-        assetSrc: "/assets/notizzettel3.png",
+        assetSrc: "/assets/elements/notizzettel3.png",
         assetAlt: "Projekt-Mandate",
-        tapeSrc: "/assets/tape-white-2.png",
+        tapeSrc: "/assets/elements/tape-white-2.png",
         imageLeft: true, // Bild links, Text rechts
       },
       {
         id: "sparring",
-        titleSrc: "/assets/sparring.png",
+        titleSrc: "/assets/notes/sparring.png",
         titleAlt: "Leadership Sparring",
         titleSize: { width: "250px" },
         titlePosition: { top: "60%", left: "60%" },
@@ -86,14 +86,14 @@ export const siteData = {
           "Restrukturierung von Organisationen & Teams",
           "Mentoring von HR Professionals",
         ],
-        assetSrc: "/assets/notizzettel2.png",
+        assetSrc: "/assets/elements/notizzettel2.png",
         assetAlt: "Leadership Sparring",
-        tapeSrc: "/assets/tape-white-3.png",
+        tapeSrc: "/assets/elements/tape-white-3.png",
         imageLeft: false,
       },
       {
         id: "workshops",
-        titleSrc: "/assets/workshops.png",
+        titleSrc: "/assets/notes/workshops.png",
         titleAlt: "Workshops & Training",
         titleSize: { width: "260px" },
         titlePosition: { top: "53%", left: "60%" },
@@ -105,9 +105,9 @@ export const siteData = {
           "High Performance & Team Dynamics",
           "Candid Feedback & Gesprächsführung",
         ],
-        assetSrc: "/assets/notizzettel4.png",
+        assetSrc: "/assets/elements/notizzettel4.png",
         assetAlt: "Workshops & Training",
-        tapeSrc: "/assets/tape-white-4.png",
+        tapeSrc: "/assets/elements/tape-white-4.png",
         imageLeft: true,
       },
     ],
@@ -115,7 +115,7 @@ export const siteData = {
 
   // ── ÜBER MICH ───────────────────────────────────────────────────────────────
   about: {
-    imageSrc: "/assets/contact3.png",
+    imageSrc: "/assets/photos/contact3.png",
     imageAlt: "Katrin Schwerdtner",
     heading: "ÜBER MICH",
     paragraphs: [
@@ -128,7 +128,7 @@ export const siteData = {
 
   // ── KONTAKT ─────────────────────────────────────────────────────────────────
   contact: {
-    imageSrc: "/assets/note-contact.png",
+    imageSrc: "/assets/elements/note-contact.png",
     imageAlt: "",
     heading: "KONTAKT",
     intro:
@@ -146,12 +146,12 @@ export const siteData = {
 
   // ── FOOTER ──────────────────────────────────────────────────────────────────
   footer: {
-    logo: "/assets/logo-white-max.png",
+    logo: "/assets/brand/logo-white-max.png",
     socialLinks: [
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/katrin-schwerdtner",
-        logo: "/assets/linkedin.png",
+        logo: "/assets/logos/linkedin.png",
       },
     ],
     legal: [

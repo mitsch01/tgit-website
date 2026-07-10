@@ -40,7 +40,7 @@ export default function LegalPage({ pageKey }: LegalPageProps) {
       <div className="mx-auto max-w-[50rem] px-6 md:px-16">
         <div className="relative mb-6 text-center">
           <img
-            src="/assets/highlighter3.png"
+            src="/assets/elements/highlighter3.png"
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute left-1/2 top-12 w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"

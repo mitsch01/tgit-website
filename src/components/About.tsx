@@ -17,7 +17,7 @@ export default function About() {
           className="relative font-heading text-4xl font-bold text-center md:text-5xl mb-28"
         >
           <img
-            src="/assets/highlighter3.png"
+            src="/assets/elements/highlighter3.png"
             alt=""
             className="absolute left-1/2 top-12 w-2/3 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
           />
@@ -57,7 +57,7 @@ export default function About() {
               </p>
             ))}
             <motion.img
-              src="/assets/smiley-white.png"
+              src="/assets/brand/smiley-white.png"
               alt=""
               className="w-1/2 self-center"
               whileHover={{ scale: 1.2 }}

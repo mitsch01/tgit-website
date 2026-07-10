@@ -35,7 +35,7 @@ export default function Hero() {
               aria-hidden="true"
               animate={{ scale: [1, 1.06, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="pointer-events-none absolute bottom-2 md:bottom-10 lg:bottom-44 left-1/3 lg:-left-1/3 -translate-x-1/2 w-36 sm:w-48 md:w-56 lg:w-72 z-0"
+              className="pointer-events-none absolute bottom-2 md:bottom-10 lg:bottom-16 lg:-left-20 w-36 sm:w-48 md:w-56 lg:w-80 z-0"
               style={{
                 aspectRatio: "4419 / 6250",
                 backgroundColor: "var(--color-brand-yellow)",
@@ -52,9 +52,10 @@ export default function Hero() {
 
             {/* Titel-Schriftzug */}
             <img
-              src="/assets/thank-god-its-tuesday_white.png"
+              src="/assets/brand/thank-god-its-tuesday_white.png"
               alt="Thank god it's Tuesday"
-              className="relative z-10 lg:right-1/2 -bottom-12 md:top-8 w-72 sm:w-96 md:w-[28rem] lg:w-[48rem] object-contain"
+              className="relative z-10 -bottom-12 md:top-8 w-72 sm:w-96 md:w-[28rem] lg:w-[40rem] object-contain"
+              style={{filter: "drop-shadow(2px 12px 50px rgba(0,0,0,0.7))"}}
             />
           </div>
         </motion.div>
@@ -100,7 +101,7 @@ export default function Hero() {
 
       {/* Scroll-Pfeil: mittig unten, immer sichtbar, zeigt nach unten */}
       <img
-        src="/assets/pfeil.gif"
+        src="/assets/elements/pfeil.gif"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-20 right-1 md:right-8 lg:right-1/4 -translate-x-1/2 w-24 md:w-32 object-contain scale-x-[-1] -rotate-[60deg] md:-rotate-[40deg]"
