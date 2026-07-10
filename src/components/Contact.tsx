@@ -258,7 +258,7 @@ export default function Contact() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="max-w-xl leading-relaxed mt-32 opacity-70 text-base md:text-lg text-center mx-auto"
+            className="max-w-xl leading-relaxed mt-24 opacity-70 text-base md:text-lg text-center mx-auto"
             style={{ color: "var(--color-brand-text)" }}
           >
             {contact.intro}

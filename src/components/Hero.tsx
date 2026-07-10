@@ -85,9 +85,6 @@ export default function Hero() {
               >
                 {hero.tagline}
               </motion.h1>
-
-
-
             </div>
           </div>
 
@@ -107,7 +104,7 @@ export default function Hero() {
           src="/assets/doodles/doodle-ok.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none justify-self-center w-36 md:w-48 mt-8 scale-x-[-1] "
+          className="pointer-events-none block mx-auto w-36 md:w-48 mt-8 scale-x-[-1] "
         />
       </section>
     </>

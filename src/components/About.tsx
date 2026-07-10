@@ -79,12 +79,11 @@ export default function About() {
               ))}
             </motion.div>
           </div>
-            <motion.img
+            <img
               src="/assets/doodles/doodle-yoga.png"
               alt=""
-              className="w-44 justify-self-center absolute z-20 pt-8"
-              whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 280, damping: 16 }}
+              aria-hidden="true"
+              className="w-44 left-1/2 -translate-x-1/2 pt-8 absolute"
             />
         </div>
             
