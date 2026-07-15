@@ -7,13 +7,13 @@ const STEP_PX = ITEM_PX + GAP_PX;
 const CONTAINER_PX = VISIBLE * ITEM_PX + (VISIBLE - 1) * GAP_PX; // 544px
 
 const logos = [
-  "/assets/logos/common-purpose-logo.png",
-  "/assets/logos/encentive-logo.png",
-  "/assets/logos/newpay-logo.png",
-  "/assets/logos/r3-robotics-logo.png",
-  "/assets/logos/synera-logo.png",
+  "/assets/logos/common-purpose-logo.webp",
+  "/assets/logos/encentive-logo.webp",
+  "/assets/logos/newpay-logo.webp",
+  "/assets/logos/r3-robotics-logo.webp",
+  "/assets/logos/synera-logo.webp",
   "/assets/logos/tomorrow_logo.svg",
-  "/assets/logos/whera-logo.png",
+  "/assets/logos/whera-logo.webp",
 ];
 
 const isCarousel = logos.length > VISIBLE;

@@ -47,7 +47,7 @@ export default function Services() {
         className="pointer-events-none absolute -bottom-36 left-1/2 z-10 w-24 -translate-x-1/2 sm:w-24"
         style={{
           aspectRatio: "1 / 1",
-          backgroundImage: "url('/assets/doodles/doodle-sparkle.png')",
+          backgroundImage: "url('/assets/doodles/doodle-sparkle.webp')",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

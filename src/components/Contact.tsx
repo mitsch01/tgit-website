@@ -91,7 +91,7 @@ export default function Contact() {
 
                 <div className="absolute -top-6 left-1/2 z-20 -translate-x-1/2 -rotate-[24deg]">
                   <img
-                    src="/assets/doodles/doodle-paperclip.png"
+                    src="/assets/doodles/doodle-paperclip.webp"
                     alt=""
                     className="w-16 object-contain opacity-95"
                     aria-hidden="true"

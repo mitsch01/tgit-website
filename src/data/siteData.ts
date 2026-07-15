@@ -19,7 +19,7 @@ export const siteData = {
   hero: {
     imageSrcLaptop: "/assets/photos/hero-desktop.jpg",
     imageSrcTablet: "/assets/photos/hero-tablet.jpg",
-    imageSrcMobile: "/assets/photos/hero-mobile.jpg",
+    imageSrcMobile: "/assets/photos/hero-mobile.webp",
     imageAlt: "Katrin Schwerdtner – Interim & Fractional People Lead",
     tagline: "Better work starts now.",
     quote:
@@ -116,7 +116,7 @@ export const siteData = {
 
   // ── ÜBER MICH ───────────────────────────────────────────────────────────────
   about: {
-    imageSrc: "/assets/photos/contact.jpg",
+    imageSrc: "/assets/photos/contact.webp",
     imageAlt: "Katrin Schwerdtner",
     heading: "ÜBER MICH",
     paragraphs: [

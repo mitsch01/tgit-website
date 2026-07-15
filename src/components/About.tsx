@@ -80,7 +80,7 @@ export default function About() {
             </motion.div>
           </div>
           <img
-            src="/assets/doodles/doodle-yoga.png"
+            src="/assets/doodles/doodle-yoga.webp"
             alt=""
             aria-hidden="true"
             className="w-44 left-1/2 -translate-x-1/2 pt-8 absolute"
