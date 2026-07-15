@@ -7,7 +7,7 @@ export const siteData = {
   // ── NAVIGATION ──────────────────────────────────────────────────────────────
   nav: {
     "logo-black": "/assets/brand/tgit-black.png",
-    "logo-white": "/assets/brand/tgit-white.png",
+    "logo-white": "/assets/brand/tgit-white.webp",
     links: [
       { label: "Leistungen", href: "#leistungen" },
       { label: "Über mich", href: "#ueber-mich" },
@@ -34,7 +34,7 @@ export const siteData = {
       {
         id: "interim",
         // title: "Interim & Fractional Management",
-        titleSrc: "/assets/notes/interim.png",
+        titleSrc: "/assets/notes/interim.webp",
         titleAlt: "Interim & Fractional Management",
         titleSize: { width: "250px" },
         titlePosition: { top: "50%", left: "50%" },
@@ -48,12 +48,12 @@ export const siteData = {
         ],
         assetSrc: "/assets/elements/notizzettel1.webp",
         assetAlt: "Interim & Fractional Management",
-        tapeSrc: "/assets/elements/tape-white-1.png",
+        tapeSrc: "/assets/elements/tape-white-1.webp",
         imageLeft: false, // Text links, Bild rechts
       },
       {
         id: "projekte",
-        titleSrc: "/assets/notes/projekt.png",
+        titleSrc: "/assets/notes/projekt.webp",
         titleAlt: "Projekt-Mandate",
         titleSize: { width: "270px" },
         titlePosition: { top: "55%", left: "60%" },
@@ -68,12 +68,12 @@ export const siteData = {
         ],
         assetSrc: "/assets/elements/notizzettel3.webp",
         assetAlt: "Projekt-Mandate",
-        tapeSrc: "/assets/elements/tape-white-2.png",
+        tapeSrc: "/assets/elements/tape-white-2.webp",
         imageLeft: true, // Bild links, Text rechts
       },
       {
         id: "sparring",
-        titleSrc: "/assets/notes/sparring.png",
+        titleSrc: "/assets/notes/sparring.webp",
         titleAlt: "Leadership Sparring",
         titleSize: { width: "250px" },
         titlePosition: { top: "60%", left: "60%" },
@@ -88,12 +88,12 @@ export const siteData = {
         ],
         assetSrc: "/assets/elements/notizzettel2.webp",
         assetAlt: "Leadership Sparring",
-        tapeSrc: "/assets/elements/tape-white-3.png",
+        tapeSrc: "/assets/elements/tape-white-3.webp",
         imageLeft: false,
       },
       {
         id: "workshops",
-        titleSrc: "/assets/notes/workshops.png",
+        titleSrc: "/assets/notes/workshops.webp",
         titleAlt: "Workshops & Training",
         titleSize: { width: "260px" },
         titlePosition: { top: "53%", left: "60%" },
@@ -108,7 +108,7 @@ export const siteData = {
         ],
         assetSrc: "/assets/elements/notizzettel4.webp",
         assetAlt: "Workshops & Training",
-        tapeSrc: "/assets/elements/tape-white-4.png",
+        tapeSrc: "/assets/elements/tape-white-4.webp",
         imageLeft: true,
       },
     ],
@@ -136,7 +136,7 @@ export const siteData = {
       "Ich freue mich über deine Nachricht und melde mich schnell bei dir zurück. Schau dich auch gern auf meinem",
     introAfterLinkedIn:
       "um. Oder du buchst dir einfach direkt ein kurzes Intro. Unverbindlich natürlich.",
-    name: "/assets/notes/katrin-schwerdtner.png",
+    name: "/assets/notes/katrin-schwerdtner.webp",
     nameAlt: "Katrin Schwerdtner",
     role: "Fractional People Lead & HR Advisor",
     location: "Hamburg & Fehmarn",
@@ -149,7 +149,7 @@ export const siteData = {
 
   // ── FOOTER ──────────────────────────────────────────────────────────────────
   footer: {
-    logo: "/assets/brand/logo-white-max.png",
+    logo: "/assets/brand/logo-white-max.webp",
     socialLinks: [
       {
         label: "LinkedIn",

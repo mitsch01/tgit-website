@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Titel-Schriftzug */}
             <img
-              src="/assets/brand/thank-god-its-tuesday_white.png"
+              src="/assets/brand/thank-god-its-tuesday_white.webp"
               alt="Thank god it's Tuesday"
               className="relative z-10 -bottom-12 md:top-8 w-72 sm:w-96 md:w-[28rem] object-contain"
               style={{ filter: "drop-shadow(2px 12px 50px rgba(0,0,0,0.4))" }}

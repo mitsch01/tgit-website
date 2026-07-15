@@ -36,7 +36,7 @@ export default function About() {
           className="relative font-heading text-4xl font-bold text-center md:text-5xl mb-24"
         >
           <img
-            src="/assets/elements/highlighter3.png"
+            src="/assets/elements/highlighter3.webp"
             alt=""
             className="absolute left-1/2 top-12 w-2/3 sm:w-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply"
           />
