@@ -39,7 +39,7 @@ export default function Hero() {
               //   scale: [1, 1.02, 1, 1.01, 1],
               // }}
               transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut" }}
-              className="pointer-events-none absolute bottom-2 md:bottom-10 lg:bottom-16 lg:-left-20 w-36 sm:w-48 md:w-56 lg:w-80 z-0"
+              className="pointer-events-none absolute bottom-2 md:bottom-10 lg:bottom-16 lg:-left-20 w-36 sm:w-48 md:w-56  z-0"
               style={{
                 aspectRatio: "4419 / 6250",
                 backgroundColor: "var(--color-brand-yellow)",
@@ -59,7 +59,7 @@ export default function Hero() {
             <img
               src="/assets/brand/thank-god-its-tuesday_white.png"
               alt="Thank god it's Tuesday"
-              className="relative z-10 -bottom-12 md:top-8 w-72 sm:w-96 md:w-[28rem] lg:w-[40rem] object-contain"
+              className="relative z-10 -bottom-12 md:top-8 w-72 sm:w-96 md:w-[28rem] object-contain"
               style={{ filter: "drop-shadow(2px 12px 50px rgba(0,0,0,0.4))" }}
             />
           </div>
@@ -101,7 +101,7 @@ export default function Hero() {
           </motion.p>
         </div>
         <img
-          src="/assets/doodles/doodle-ok.png"
+          src="/assets/doodles/doodle-ok.svg"
           alt=""
           aria-hidden="true"
           className="pointer-events-none block mx-auto w-36 md:w-48 mt-8 scale-x-[-1] "

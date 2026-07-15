@@ -7,27 +7,70 @@ type LegalPageProps = {
 };
 
 function renderTextWithLinks(text: string) {
-  const parts = text.split(/(https?:\/\/\S+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g);
+  const tokenRegex =
+    /(https?:\/\/[^\s]+|www\.[^\s]+|\b(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}(?:\/[^\s]*)?|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g;
+  const parts = text.split(tokenRegex);
+
+  const trimTrailingPunctuation = (value: string) => {
+    const match = value.match(/^(.+?)([.,;:!?)]*)$/);
+    if (!match) {
+      return { core: value, trailing: "" };
+    }
+
+    return { core: match[1], trailing: match[2] };
+  };
+
   return parts.map((part, idx) => {
-    if (/^https?:\/\//.test(part)) {
+    if (!part) {
+      return null;
+    }
+
+    const { core, trailing } = trimTrailingPunctuation(part);
+
+    if (/^https?:\/\//.test(core)) {
       return (
-        <a
-          key={`${part}-${idx}`}
-          href={part}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {part}
-        </a>
+        <span key={`${part}-${idx}`}>
+          <a
+            href={core}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4"
+          >
+            {core}
+          </a>
+          {trailing}
+        </span>
       );
     }
-    if (/^[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(part)) {
+
+    if (/^[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(core)) {
       return (
-        <a key={`${part}-${idx}`} href={`mailto:${part}`}>
-          {part}
-        </a>
+        <span key={`${part}-${idx}`}>
+          <a href={`mailto:${core}`} className="underline underline-offset-4">
+            {core}
+          </a>
+          {trailing}
+        </span>
       );
     }
+
+    if (/^www\./.test(core) || /^(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}(?:\/\S*)?$/.test(core)) {
+      const href = /^https?:\/\//.test(core) ? core : `https://${core}`;
+      return (
+        <span key={`${part}-${idx}`}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4"
+          >
+            {core}
+          </a>
+          {trailing}
+        </span>
+      );
+    }
+
     return <span key={`${part}-${idx}`}>{part}</span>;
   });
 }

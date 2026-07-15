@@ -43,7 +43,7 @@ export const siteData = {
         cta: "BEISPIELE",
         examples: [
           "Vakanz-Überbrückung von People Rollen",
-          "ANeuaufbau / Neuausrichtung von People & Org Setups",
+          "Neuaufbau / Neuausrichtung von People & Org Setups",
           "Change- und Transformationsbegleitung",
         ],
         assetSrc: "/assets/elements/notizzettel1.png",
@@ -104,6 +104,7 @@ export const siteData = {
           "Leadership Development Journeys",
           "High Performance & Team Dynamics",
           "Candid Feedback & Gesprächsführung",
+          "Hiring Excellence Training"
         ],
         assetSrc: "/assets/elements/notizzettel4.png",
         assetAlt: "Workshops & Training",
@@ -132,15 +133,17 @@ export const siteData = {
     imageAlt: "",
     heading: "KONTAKT",
     intro:
-      "Ich freue mich über deine Nachricht und melde mich schnell bei dir zurück. Oder du buchst dir einfach direkt ein kurzes Intro. Unverbindlich natürlich.",
-    // Visitenkarten-Daten
-    name: "Katrin Schwerdtner",
+      "Ich freue mich über deine Nachricht und melde mich schnell bei dir zurück. Schau dich auch gern auf meinem",
+    introAfterLinkedIn:
+      "um. Oder du buchst dir einfach direkt ein kurzes Intro. Unverbindlich natürlich.",
+    name: "/assets/notes/katrin-schwerdtner.png",
+    nameAlt: "Katrin Schwerdtner",
     role: "Fractional People Lead & HR Advisor",
     location: "Hamburg & Fehmarn",
     email: "katrin@tgit.team",
     mobile: "+49 177 3477326",
     mailtoHref: "mailto:katrin@tgit.team",
-    bookingText: "Book a 15 minutes Intro",
+    bookingText: "Click to book intro",
     bookingLink: "https://calendar.app.google/iKfqRNGzyc6TccKeA",
   },
 
@@ -246,10 +249,17 @@ export const siteData = {
           paragraphs: ["Telefon: +49 177 3477326", "E-Mail: katrin@tgit.team"],
         },
         {
+          title: "Fotos",
+          paragraphs: ["Christoph Niemann", "Businessfotograf", "businessportraits-hamburg.de"],
+        },
+        {
+          title: "Web-Development und Design",
+          paragraphs: ["Miriam Schwartz", "Software Developer", "studio-mitsch.de"],
+        },
+        {
           title: "Steuerliche Angaben",
           paragraphs: "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE460226275",
         },
-
         {
           title: "Verantwortlich fuer den Inhalt nach § 18 Abs. 2 MStV",
           paragraphs: ["Katrin Schwerdtner", "Sahrensdorf 31", "23769 Fehmarn"],
