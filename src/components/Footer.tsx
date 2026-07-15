@@ -43,12 +43,12 @@ export default function Footer() {
         </div>
 
         {/* Legal Links */}
-        <div className="flex gap-6 text-xs text-white/70">
+        <div className="flex gap-6 text-xs text-white/90">
           {footer.legal.map((link) => (
             <Link
               key={link.label}
               to={link.href}
-              className="hover:text-white/90 transition-colors"
+              className="hover:text-white transition-colors"
             >
               {link.label}
             </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Credit */}
-        <p className="text-xs text-white/40">{footer.credit}</p>
+        <p className="text-xs text-white/60">{footer.credit}</p>
       </div>
       <img
         src="/assets/doodles/doodle-lightbulb.png"

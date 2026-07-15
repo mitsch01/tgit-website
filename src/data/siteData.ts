@@ -46,7 +46,7 @@ export const siteData = {
           "Neuaufbau / Neuausrichtung von People & Org Setups",
           "Change- und Transformationsbegleitung",
         ],
-        assetSrc: "/assets/elements/notizzettel1.png",
+        assetSrc: "/assets/elements/notizzettel1.webp",
         assetAlt: "Interim & Fractional Management",
         tapeSrc: "/assets/elements/tape-white-1.png",
         imageLeft: false, // Text links, Bild rechts
@@ -66,7 +66,7 @@ export const siteData = {
           "Purpose, Values & Ways of Working",
           "HR Audit & Process Design",
         ],
-        assetSrc: "/assets/elements/notizzettel3.png",
+        assetSrc: "/assets/elements/notizzettel3.webp",
         assetAlt: "Projekt-Mandate",
         tapeSrc: "/assets/elements/tape-white-2.png",
         imageLeft: true, // Bild links, Text rechts
@@ -86,7 +86,7 @@ export const siteData = {
           "Restrukturierung von Organisationen & Teams",
           "Mentoring von HR Professionals",
         ],
-        assetSrc: "/assets/elements/notizzettel2.png",
+        assetSrc: "/assets/elements/notizzettel2.webp",
         assetAlt: "Leadership Sparring",
         tapeSrc: "/assets/elements/tape-white-3.png",
         imageLeft: false,
@@ -106,7 +106,7 @@ export const siteData = {
           "Candid Feedback & Gesprächsführung",
           "Hiring Excellence Training"
         ],
-        assetSrc: "/assets/elements/notizzettel4.png",
+        assetSrc: "/assets/elements/notizzettel4.webp",
         assetAlt: "Workshops & Training",
         tapeSrc: "/assets/elements/tape-white-4.png",
         imageLeft: true,
@@ -129,7 +129,7 @@ export const siteData = {
 
   // ── KONTAKT ─────────────────────────────────────────────────────────────────
   contact: {
-    imageSrc: "/assets/elements/note-contact.png",
+    imageSrc: "/assets/elements/note-contact.webp",
     imageAlt: "",
     heading: "KONTAKT",
     intro:

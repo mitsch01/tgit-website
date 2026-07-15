@@ -112,6 +112,7 @@ export default function ServiceCard({
             src={assetSrc}
             alt={assetAlt}
             className="object-contain relative z-20 opacity-60 mix-blend-multiply"
+            aria-hidden="true"
           />
           {/* // Heading */}
           <img
@@ -124,6 +125,7 @@ export default function ServiceCard({
           <img
             src={tapeSrc}
             className="absolute top-3 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none object-contain z-10"
+            aria-hidden="true"
           />
         </motion.div>
       </div>
