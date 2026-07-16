@@ -121,7 +121,7 @@ export const siteData = {
     heading: "ÜBER MICH",
     paragraphs: [
       "Hi! Ich bin Katrin.",
-      "Im Konzern habe ich gelernt, in großen Systemen zu denken und zu agieren. In Startups und Scale-ups, schnell, pragmatisch und hands-on Wirkung zu erzeugen. Beides prägt meine Arbeit.",
+      "Im Konzern habe ich gelernt, in großen Systemen zu denken und zu agieren. In Startups und Scaleups, schnell, pragmatisch und hands-on Wirkung zu erzeugen. Beides prägt meine Arbeit.",
       "Als erfahrene HR-Führungskraft begleite ich Unternehmen in Wachstums- und Veränderungsphasen. Dabei verbinde ich strategischen Weitblick mit der Fähigkeit, im richtigen Moment operativ einzutauchen. Ich schaffe Orientierung im Chaos und entwickle tragfähige, skalierbare Strukturen – immer an der Schnittstelle von Businesszielen und People Needs. Zahlen und Dashboards geben mir Orientierung. Die feinen Zwischentöne im System auch.",
       "Ich arbeite fokussiert, mit Tempo – und verliere auch in anspruchsvollen Momenten nicht meinen Humor. Noch nie. Bisher. Challenge me. ;)",
     ],

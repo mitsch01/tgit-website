@@ -130,7 +130,7 @@ export default function Contact() {
                   >
                     {contact.bookingText}
                   </a>
-                  <img src="/assets/doodles/doodle-smiley.png" rel="noopener noreferrer" alt="hidden" className="w-8 self-end" />
+                  <img src="/assets/doodles/doodle-smiley.webp" rel="noopener noreferrer" alt="hidden" className="w-8 self-end" />
                 </div>
               </div>
             </motion.div>
